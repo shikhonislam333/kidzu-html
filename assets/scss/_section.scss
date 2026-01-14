@@ -34,79 +34,6 @@
 	h2 {
 		color: $header-color;
 	}
-
-	&.style-2 {
-		.sub-title {
-			color: $theme-color-2;
-		}
-
-		h2 {
-			color: $header-color-2;
-
-			span {
-				color: $theme-color-2;
-				text-decoration: underline;
-				border-bottom: 4px solid $theme-color-2;
-			}
-		}
-	}
-
-	&.style-3 {
-		.sub-title {
-			display: inline-block;
-			font-size: 14px;
-			font-weight: 600;
-			font-family: $heading-font;
-			border-radius: 50px;
-			color: $theme-color-3;
-			text-transform: uppercase;
-			background-color: $bg-color-4;
-			height: 30px;
-			line-height: 30px;
-			padding: 0 16px;
-		}
-
-		h2 {
-			font-weight: 600;
-			color: $header-color-3;
-		}
-	}
-
-	&.style-4 {
-		.sub-title {
-			color: $theme-color-4;
-			font-family: $heading-font;
-			font-size: 14px;
-			font-weight: 600;
-			text-transform: uppercase;
-		}
-
-		h2 {
-			font-weight: 600;
-			color: $header-color-4;
-		}
-	}
-
-	&.style-5 {
-		.sub-title {
-			color: $header-color-4;
-			background-color: $theme-color-6;
-			font-size: 14px;
-			font-weight: 500;
-			letter-spacing: -0.42px;
-			text-transform: uppercase;
-			display: inline-block;
-			height: 26px;
-			line-height: 26px;
-			padding: 0 12px;
-			border-radius: 18px;
-		}
-
-		h2 {
-			color: $header-color-4;
-			font-weight: 600;
-		}
-	}
 }
 
 .section-title-area	{
@@ -201,24 +128,6 @@
 		}
 	}
 
-	.prtoject-title {
-		font-size: 200px;
-		font-weight: 700;
-		text-transform: uppercase;
-		line-height: 1;
-
-		@include breakpoint (max-xl){
-			font-size: 150px;
-		}
-
-		@include breakpoint (max-sm){
-			font-size: 140px;
-		}
-
-		@include breakpoint (max-xxs){
-			font-size: 100px;
-		}
-	}
 }
 
 
@@ -233,26 +142,6 @@
 
 .section-bg {
 	background-color: $bg-color;
-}
-
-.section-bg-2 {
-	background-color: $bg-color-2;
-}
-
-.section-bg-3 {
-	background-color: $bg-color-3;
-}
-
-.section-bg-4 {
-	background-color: $bg-color-4;
-}
-
-.section-bg-5 {
-	background-color: $bg-color-6;
-}
-
-.section-bg-6 {
-	background-color: $bg-color-5;
 }
 
 .section-padding {

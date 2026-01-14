@@ -1,18 +1,19 @@
 /* --------------------------------------------
     Template Default Fonts & Fonts Styles
  ---------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
-$heading-font: 'Inter', sans-serif;
-$body-font: "Public Sans", sans-serif;
+$heading-font: 'Quicksand', sans-serif;
+$body-font: "Source Sans 3", sans-serif;
+$sub-font: "Kalam", cursive;
 //font-family: "Font Awesome 6 Free";
 $fa: "Font Awesome 6 Pro";
 
 body {
     font-family: $body-font;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 28px;
     color: $text-color;
@@ -61,9 +62,9 @@ h6 {
 }
 
 h1 {
-	font-size: 72px;
-	font-weight: 500;
-	line-height: 100%;
+	font-size: 70px;
+	font-weight: 700;
+	line-height: 114%;
 	letter-spacing: -2px;
 
 	@include breakpoint(max-xxl){
@@ -93,8 +94,8 @@ h1 {
 }
 
 h2 {
-	font-size: 48px;
-	font-weight: 500;
+	font-size: 50px;
+	font-weight: 700;
 	line-height: 120%;
 
 	@include breakpoint(max-xxl){
@@ -125,8 +126,8 @@ h2 {
 
 h3 {
 	font-size: 24px;
-	font-weight: 500;
-	line-height: 133.333%;
+	font-weight: 700;
+	line-height: 142%;
 
 	@include breakpoint(max-sm){
 		font-size: 22px;
@@ -134,7 +135,7 @@ h3 {
 }
 
 h4 {
-	font-size: 18px;
+	font-size: 24px;
 	font-weight: 400;
 }
 
