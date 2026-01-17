@@ -1478,6 +1478,7 @@ span {
   mask-position: center center;
   mask-size: cover;
   position: relative;
+  z-index: 99;
 }
 .choose-us-wrapper .choose-us-image .vec-shape {
   position: absolute;
@@ -1487,6 +1488,116 @@ span {
 .choose-us-wrapper .choose-us-image img {
   width: 100%;
   height: 100%;
+}
+.choose-us-wrapper .choose-us-image-items {
+  position: relative;
+}
+.choose-us-wrapper .choose-us-image-items .vec-shape {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+}
+
+.choose-us-section {
+  position: relative;
+}
+.choose-us-section .shape1 {
+  position: absolute;
+  bottom: 20%;
+  left: 20px;
+  animation: rounded 5s linear infinite;
+}
+.choose-us-section .shape2 {
+  position: absolute;
+  top: 4%;
+  left: 50%;
+}
+.choose-us-section .shape3 {
+  position: absolute;
+  bottom: 6%;
+  right: 0;
+}
+
+.counter-box-items {
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+.counter-box-items .bg-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+}
+.counter-box-items .bg-image img {
+  width: 100%;
+  height: 100%;
+}
+.counter-box-items .counter-box {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+.counter-box-items .counter-box h2 {
+  font-size: 40px;
+  position: relative;
+  z-index: 99;
+}
+.counter-box-items .counter-box p {
+  position: relative;
+  z-index: 99;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.counter-box-items .counter-box .bg-shape {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 156px;
+  height: 156px;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 156 156"><path fill-rule="evenodd" clip-rule="evenodd" d="M156 94.5957C156 140.729 113.558 156 73.1553 156C32.7527 156 0 140.729 0 94.5957C0 48.4623 32.7527 0 73.1553 0C113.558 0 156 48.4623 156 94.5957Z" /></svg>');
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+  background-color: #FEF4DE;
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s ease-in-out;
+  z-index: 11;
+}
+.counter-box-items .counter-box .bg-shape.bg-2 {
+  background-color: #E1F6FE;
+}
+.counter-box-items .counter-box .bg-shape.bg-3 {
+  background-color: #E6E8FC;
+}
+.counter-box-items .counter-box .bg-shape.bg-4 {
+  background-color: #FEDFEF;
+}
+.counter-box-items:hover .bg-image {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+.counter-box-items:hover .counter-box .bg-shape {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .program-section {
@@ -1558,6 +1669,56 @@ span {
     transform: translateX(calc(-100% - var(--gap)));
   }
 }
+.schedule-box-items {
+  margin-top: 30px;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  z-index: 9;
+  transition: all 0.4s ease-in-out;
+}
+.schedule-box-items .bg-shape {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 299"><path fill-rule="evenodd" clip-rule="evenodd"  d="M0 40.0055C0 16.0055 20.9876 -2.59179 44.8133 0.296168L160.187 14.2808C163.384 14.6684 166.616 14.6684 169.813 14.2808L285.187 0.296172C309.012 -2.59179 330 16.0055 330 40.0055V243.42C330 263.65 314.896 280.695 294.813 283.129L169.813 298.281C166.616 298.668 163.384 298.668 160.187 298.281L35.1868 283.129C15.104 280.695 0 263.65 0 243.42V40.0055Z" /></svg>');
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+  background-color: rgba(254, 244, 222, 0.3);
+  z-index: -1;
+}
+.schedule-box-items .bg-shape.bg-2 {
+  background-color: rgba(230, 232, 252, 0.3);
+}
+.schedule-box-items .bg-shape.bg-3 {
+  background-color: rgba(254, 223, 239, 0.3);
+}
+.schedule-box-items .bg-shape.bg-4 {
+  background-color: rgba(225, 246, 254, 0.3);
+}
+.schedule-box-items .content {
+  margin-top: 20px;
+}
+.schedule-box-items .content h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.schedule-box-items .content p {
+  font-weight: 400;
+  max-width: 225px;
+  margin: 0 auto;
+}
+.schedule-box-items:hover {
+  transform: translateY(-10px);
+}
+.schedule-box-items:hover .icon img {
+  animation: wobble 1.5s ease-in-out;
+}
+
 .array-button {
   display: flex;
   align-items: center;

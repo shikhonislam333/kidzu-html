@@ -67,3 +67,64 @@
     transform: translateX(calc(-100% - var(--gap)));
   }
 }
+
+.schedule-box-items {
+    margin-top: 30px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    z-index: 9;
+    @include transition;
+
+    .bg-shape {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        height: 100%;
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 299"><path fill-rule="evenodd" clip-rule="evenodd"  d="M0 40.0055C0 16.0055 20.9876 -2.59179 44.8133 0.296168L160.187 14.2808C163.384 14.6684 166.616 14.6684 169.813 14.2808L285.187 0.296172C309.012 -2.59179 330 16.0055 330 40.0055V243.42C330 263.65 314.896 280.695 294.813 283.129L169.813 298.281C166.616 298.668 163.384 298.668 160.187 298.281L35.1868 283.129C15.104 280.695 0 263.65 0 243.42V40.0055Z" /></svg>');
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+        background-color: rgba(254, 244, 222, 0.3);
+        z-index: -1;
+
+        &.bg-2 {
+            background-color: rgba(230, 232, 252, 0.3);
+        }
+
+         &.bg-3 {
+            background-color: rgba(254, 223, 239, 0.3);
+        }
+
+         &.bg-4 {
+            background-color: rgba(225, 246, 254, 0.3);
+        }
+    }
+
+    .content {
+        margin-top: 20px;
+
+        h3 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-weight: 400;
+            max-width: 225px;
+            margin: 0 auto;
+        }
+    }
+
+    &:hover {
+         transform: translateY(-10px);
+
+         .icon {
+            img {
+              animation: wobble 1.5s ease-in-out;
+            }
+         }
+    }
+}
