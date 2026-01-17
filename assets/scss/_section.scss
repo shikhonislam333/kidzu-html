@@ -15,20 +15,16 @@
 		}
 	}
 
-	.sub-title {
+	.sec-sub {
 		position: relative;
-		font-size: 14px;
-		font-weight: 600;
+		font-size: 18px;
+		font-weight: 700;
 		color: $theme-color;
 		text-transform: uppercase;
 		line-height: 1;
-		margin-bottom: 20px;
-
-		img {
-			line-height: 1;
-			margin-right: 5px;
-			margin-top: -3px;
-		}
+		margin-bottom: 10px;
+		font-family: $sub-font;
+		display: inline-block;
 	}
 
 	h2 {

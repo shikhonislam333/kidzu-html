@@ -1,0 +1,139 @@
+.about-wrapper {
+    position: relative;
+    z-index: 9;
+    margin: 0 60px;
+    margin-bottom: 110px;
+
+    .bg-shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #EFF5F6;
+        transition: all 500ms ease;
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 870"><path d="M0 105.791C0 43.7521 63.8552 2.25424 120.547 27.4504C187.046 57.0058 262.954 57.0058 329.453 27.4504L337.5 23.8741C409.122 -7.95805 490.878 -7.95803 562.5 23.8741C634.122 55.7063 715.878 55.7063 787.5 23.8741C859.122 -7.95803 940.878 -7.95803 1012.5 23.8741C1084.12 55.7063 1165.88 55.7063 1237.5 23.8741C1309.12 -7.95803 1390.88 -7.95801 1462.5 23.8742L1470.55 27.4505C1537.05 57.0058 1612.95 57.0058 1679.45 27.4504C1736.14 2.25424 1800 43.7521 1800 105.791V615.331C1800 672.302 1752.47 717.762 1695.56 715.232L1359.96 700.317C1353.34 700.022 1346.7 700.387 1340.15 701.407L915.371 767.483C905.185 769.068 894.815 769.068 884.629 767.483L459.851 701.407C453.3 700.387 446.664 700.022 440.04 700.317L104.44 715.232C47.5251 717.762 0 672.302 0 615.331V105.791Z" /></svg>');
+        mask-repeat: no-repeat;
+        mask-position: center center;
+        mask-size: cover;
+        width: 100%;
+        height: 860px;
+        z-index: -1;
+    }
+
+    .about-image {
+        max-width: 526px;
+        position: relative;
+        bottom: -65px;
+
+        .about-image-2 {
+            position: absolute;
+            bottom: 0;
+            right: -60%;
+            max-width: 468px;
+
+            img {
+                 border-bottom-left-radius: 0;
+            }
+        }
+
+        img {
+            @include imgw;
+            border-bottom-left-radius: 100px;
+        }
+    }
+
+    .about-content {
+        max-width: 740px;
+        margin-top: 70px;
+
+        .about-text {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 22px;
+            max-width: 700px;
+        }
+
+        .icon-box {
+            margin-top: 30px;
+            @include flex;
+            gap: 30px;
+
+            li {
+                background-color: $white;
+                border-radius: 35px;
+                padding: 20px;
+                @include flex;
+                gap: 20px;
+                padding-right: 40px;
+
+                .icon {
+                    width: 56px;
+                    height: 56px;
+                    line-height: 56px;
+                    text-align: center;
+                    border-radius: 50%;
+                    background-color: #FEF4DE;
+                }
+
+                .content {
+                    h3 {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        .about-text-2 {
+            max-width: 690px;
+            font-size: 18px;
+            margin-top: 30px;
+            border-bottom: 1px solid rgba(56, 84, 105, 0.2);
+            padding-bottom: 30px;
+        }
+
+        .about-button {
+            @include flex;
+            gap: 30px;
+            margin-top: 40px;
+
+            .author-icon {
+                @include flex;
+                gap: 15px;
+
+                .icon {
+                    width: 56px;
+                    line-height: 59px;
+                    height: 59px;
+                    text-align: center;
+                    background-color: $header-color;
+                    text-align: center;
+                    color: $white;
+                    border-radius: 15px;
+                    position: relative;
+                }
+
+                .content {
+                    h4 {
+                        font-weight: 700;
+                        font-size: 24px;
+
+                        a {
+                            color: $header-color;
+
+                            &:hover {
+                                color: $theme-color;
+                            }
+                        }
+                    }
+
+                    span {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: $header-color;
+                        font-family: $heading-font;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -156,47 +156,47 @@
 
 
   // Main Slider
-	var slider = new Swiper('.hero-slider', {
-		slidesPerView: 1,
-		spaceBetween: 0,
-		loop: true,
-		autoplay: {
-			enabled: true,
-			delay: 6000
-		},
-		// Navigation arrows
-		navigation: {
-			nextEl: '.main-slider-next',
-			prevEl: '.main-slider-prev',
-			clickable: true,
-		},
-		//Pagination
-		pagination: {
-			el: ".slider-one_pagination",
-			clickable: true,
-		},
-		speed: 500,
-		breakpoints: {
-			'1600': {
-				slidesPerView: 1,
-			},
-			'1200': {
-				slidesPerView: 1,
-			},
-			'992': {
-				slidesPerView: 1,
-			},
-			'768': {
-				slidesPerView: 1,
-			},
-			'576': {
-				slidesPerView: 1,
-			},
-			'0': {
-				slidesPerView: 1,
-			},
-		},
-	});
+	// var slider = new Swiper('.hero-slider', {
+	// 	slidesPerView: 1,
+	// 	spaceBetween: 0,
+	// 	loop: true,
+	// 	autoplay: {
+	// 		enabled: true,
+	// 		delay: 6000
+	// 	},
+	// 	// Navigation arrows
+	// 	navigation: {
+	// 		nextEl: '.main-slider-next',
+	// 		prevEl: '.main-slider-prev',
+	// 		clickable: true,
+	// 	},
+	// 	//Pagination
+	// 	pagination: {
+	// 		el: ".slider-one_pagination",
+	// 		clickable: true,
+	// 	},
+	// 	speed: 500,
+	// 	breakpoints: {
+	// 		'1600': {
+	// 			slidesPerView: 1,
+	// 		},
+	// 		'1200': {
+	// 			slidesPerView: 1,
+	// 		},
+	// 		'992': {
+	// 			slidesPerView: 1,
+	// 		},
+	// 		'768': {
+	// 			slidesPerView: 1,
+	// 		},
+	// 		'576': {
+	// 			slidesPerView: 1,
+	// 		},
+	// 		'0': {
+	// 			slidesPerView: 1,
+	// 		},
+	// 	},
+	// });
 
     /* ================================
       Brand Slider Js Start
@@ -374,28 +374,111 @@
     }
 
      /* ================================
+       Text Title Animation Js Start
+    ================================ */
+
+   if (typeof gsap !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger, SplitText);
+
+        let mm = gsap.matchMedia();
+
+        mm.add("(min-width: 1200px)", () => {
+
+            let splits = [];
+
+            // ===== tz-sub-tilte =====
+            $('.tz-sub-tilte').each(function (index, el) {
+
+            let split = new SplitText(el, {
+                type: "lines,words,chars",
+                linesClass: "split-line"
+            });
+
+            splits.push(split);
+
+            gsap.set(split.chars, {
+                opacity: 0,
+                x: 7
+            });
+
+            gsap.to(split.chars, {
+                scrollTrigger: {
+                trigger: el,
+                start: "top 90%",
+                end: "top 60%",
+                scrub: 1
+                },
+                x: 0,
+                opacity: 1,
+                duration: 0.7,
+                stagger: 0.2
+            });
+            });
+
+            // ===== tz-itm-title =====
+            $('.tz-itm-title').each(function (index, el) {
+
+            let split = new SplitText(el, {
+                type: "lines,words,chars",
+                linesClass: "split-line"
+            });
+
+            splits.push(split);
+
+            gsap.set(split.chars, {
+                opacity: 0.3,
+                x: -7
+            });
+
+            gsap.to(split.chars, {
+                scrollTrigger: {
+                trigger: el,
+                start: "top 92%",
+                end: "top 60%",
+                scrub: 1
+                },
+                x: 0,
+                opacity: 1,
+                duration: 0.7,
+                stagger: 0.2
+            });
+            });
+
+            // ðŸ”¥ MOST IMPORTANT PART
+            ScrollTrigger.refresh();
+
+            // ðŸ”¥ cleanup on breakpoint change
+            return () => {
+            splits.forEach(split => split.revert());
+            ScrollTrigger.getAll().forEach(st => st.kill());
+            };
+
+        });
+    }
+
+     /* ================================
        Sticky Js Start
     ================================ */
 
     let pr = gsap.matchMedia();
-	pr.add("(min-width: 1199px)", () => {
-		let tl = gsap.timeline();
-		let panels = document.querySelectorAll('.tp-panel-pin')
-		panels.forEach((section, index) => {
-			tl.to(section, {
-				scrollTrigger: {
-					trigger: section,
-					pin: section,
-					scrub: 1,
-					start: 'top 14%',
-					end: "bottom 62%",
-					endTrigger: '.tp-panel-pin-area',
-					pinSpacing: false,
-					markers: false,
-				},
-			})
-		})
-	});
+    pr.add("(min-width: 1199px)", () => {
+      let tl = gsap.timeline();
+      let panels = document.querySelectorAll('.tp-panel-pin')
+      panels.forEach((section, index) => {
+        tl.to(section, {
+          scrollTrigger: {
+            trigger: section,
+            pin: section,
+            scrub: 1,
+            start: 'top 14%',
+            end: "bottom 62%",
+            endTrigger: '.tp-panel-pin-area',
+            pinSpacing: false,
+            markers: false,
+          },
+        })
+      })
+    });
 
 
     /* ================================
