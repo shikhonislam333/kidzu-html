@@ -198,45 +198,83 @@
 	// 	},
 	// });
 
-    /* ================================
+     /* ================================
       Brand Slider Js Start
     ================================ */
 
-//    if ($('.brand-slider').length > 0) {
-//     const brandSlider = new Swiper(".brand-slider", {
-//         spaceBetween: 30,
-//         speed: 1300,
-//         loop: true,
-//         autoplay: {
-//             delay: 2000,
-//             disableOnInteraction: false,
-//         },
-//         navigation: {
-//             nextEl: ".array-next",
-//             prevEl: ".array-prev",
-//         },
-//         breakpoints: {
-//             1399: {
-//                 slidesPerView: 6,
-//             },
-//             1199: {
-//                 slidesPerView: 5.5,
-//             },
-//             991: {
-//                 slidesPerView: 4.5,
-//             },
-//             767: {
-//                 slidesPerView: 3.3,
-//             },
-//             575: {
-//                 slidesPerView: 2,
-//             },
-//             0: {
-//                 slidesPerView: 1.6,
-//             },
-//         },
-//     });
-//    }
+   if ($('.brand-slider').length > 0) {
+    const brandSlider = new Swiper(".brand-slider", {
+        spaceBetween: 50,
+        speed: 1300,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".array-next",
+            prevEl: ".array-prev",
+        },
+        breakpoints: {
+            1399: {
+                slidesPerView: 7,
+            },
+            1199: {
+                slidesPerView: 5.5,
+            },
+            991: {
+                slidesPerView: 4.5,
+            },
+            767: {
+                slidesPerView: 3.3,
+            },
+            575: {
+                slidesPerView: 2,
+            },
+            0: {
+                slidesPerView: 1.6,
+            },
+        },
+    });
+   }
+
+    /* ================================
+      Team Slider Js Start
+    ================================ */
+
+   if ($('.team-slider').length > 0) {
+    const teamSlider = new Swiper(".team-slider", {
+        spaceBetween: 30,
+        speed: 1300,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".array-next",
+            prevEl: ".array-prev",
+        },
+        breakpoints: {
+            
+            1199: {
+                slidesPerView: 4,
+            },
+            991: {
+                slidesPerView: 3,
+            },
+            767: {
+                slidesPerView: 2,
+            },
+            575: {
+                slidesPerView: 1.4,
+            },
+            0: {
+                slidesPerView: 1,
+            },
+        },
+    });
+   }
 
     /* ================================
       Feature Box Slider Js Start

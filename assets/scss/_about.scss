@@ -137,3 +137,61 @@
         }
     }
 }
+
+.about-section {
+    position: relative;
+
+    .about-vec {
+        position: absolute;
+        left: 28%;
+        top: 11%;
+        z-index: 91;
+        animation: rounded 5s linear infinite;
+    }
+
+     .about-vec2 {
+        position: absolute;
+        right: 15%;
+        bottom: 17%;
+        z-index: 91;
+        animation: rounded 5s linear infinite;
+    }
+
+    .about-vec3 {
+        position: absolute;
+        left: 20%;
+        bottom: 10%;
+         animation: rounded 5s linear infinite;
+    }
+}
+
+.book-admission-banner {
+  .book-admission-content {
+    max-width: 610px;
+    position: relative;
+    padding: 80px 50px;
+
+    // .bg-shape {
+    //     background-color: red;
+    //     width: 100%;
+    //     height: 100%;
+    //     position: absolute;
+
+    //     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 606 584'%3E%3Cpath d='M0 100C0 44.7715 44.7715 0 100 0H506C561.228 0 606 44.7715 606 100V375.976C606 421.373 575.421 461.074 531.528 472.663L125.528 579.857C62.1005 596.604 0 548.772 0 483.171V100Z'/%3E%3C/svg%3E");
+    //     -webkit-mask-repeat: no-repeat;
+    //     -webkit-mask-position: center;
+    //     -webkit-mask-size: cover;
+
+    //     mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 606 584'%3E%3Cpath d='M0 100C0 44.7715 44.7715 0 100 0H506C561.228 0 606 44.7715 606 100V375.976C606 421.373 575.421 461.074 531.528 472.663L125.528 579.857C62.1005 596.604 0 548.772 0 483.171V100Z'/%3E%3C/svg%3E");
+    //     mask-repeat: no-repeat;
+    //     mask-position: center;
+    //     mask-size: cover;
+    // }
+  }
+
+    img {
+        width: 100%;
+        height: 100%;
+       
+    }
+}
