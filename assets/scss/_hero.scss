@@ -146,24 +146,24 @@
                 font-size: 16px;
             }
 
-                // transition: all 900ms ease;
-                // -moz-transition: all 900ms ease;
-                // -webkit-transition: all 900ms ease;
-                // -ms-transition: all 900ms ease;
-                // -o-transition: all 900ms ease;
-                // text-transform: uppercase;
-                // transition: 1.3s cubic-bezier(0.5, 0.5, 0, 1);
-                // clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+                transition: all 900ms ease;
+                -moz-transition: all 900ms ease;
+                -webkit-transition: all 900ms ease;
+                -ms-transition: all 900ms ease;
+                -o-transition: all 900ms ease;
+                text-transform: uppercase;
+                transition: 1.3s cubic-bezier(0.5, 0.5, 0, 1);
+                clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
         }
 
         .hero-title {
             // transition: all 900ms ease;
-            // -moz-transition: all 900ms ease;
-            // -webkit-transition: all 900ms ease;
-            // -ms-transition: all 900ms ease;
-            // -o-transition: all 900ms ease;
-            // transition: 1.3s cubic-bezier(0.5, 0.5, 0, 1);
-            // clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+            -moz-transition: all 900ms ease;
+            -webkit-transition: all 900ms ease;
+            -ms-transition: all 900ms ease;
+            -o-transition: all 900ms ease;
+            transition: 1.3s cubic-bezier(0.5, 0.5, 0, 1);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
 
             @include breakpoint (max-xxs){
                 font-size: 35px;
@@ -173,13 +173,13 @@
         p {
             max-width: 592px;
             margin-top: 30px;
-            // transition: all 900ms ease;
-            // -moz-transition: all 900ms ease;
-            // -webkit-transition: all 900ms ease;
-            // -ms-transition: all 900ms ease;
-            // -o-transition: all 900ms ease;
-            // transition: 1.3s cubic-bezier(0.5, 0.5, 0, 1);
-            // clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+            transition: all 900ms ease;
+            -moz-transition: all 900ms ease;
+            -webkit-transition: all 900ms ease;
+            -ms-transition: all 900ms ease;
+            -o-transition: all 900ms ease;
+            transition: 1.3s cubic-bezier(0.5, 0.5, 0, 1);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
 
             @include breakpoint (max-lg){
                 margin: 30px auto 0;
@@ -198,13 +198,13 @@
             @include flex;
             gap: 20px;
             margin-top: 38px;
-            // transition: all 900ms ease;
-            // -moz-transition: all 900ms ease;
-            // -webkit-transition: all 900ms ease;
-            // -ms-transition: all 900ms ease;
-            // -o-transition: all 900ms ease;
-            // transition: 1.3s cubic-bezier(0.5, 0.5, 0, 1);
-            // clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+            transition: all 900ms ease;
+            -moz-transition: all 900ms ease;
+            -webkit-transition: all 900ms ease;
+            -ms-transition: all 900ms ease;
+            -o-transition: all 900ms ease;
+            transition: 1.3s cubic-bezier(0.5, 0.5, 0, 1);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
 
             @include breakpoint (max-xl){
                 flex-wrap: wrap;
@@ -227,13 +227,13 @@
     }
 
     .hero-image {
-        // transition: all 900ms ease;
-        // -moz-transition: all 900ms ease;
-        // -webkit-transition: all 900ms ease;
-        // -ms-transition: all 900ms ease;
-        // -o-transition: all 900ms ease;
-        // transition: 1.3s cubic-bezier(0.5, 0.5, 0, 1);
-        // clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+        transition: all 900ms ease;
+        -moz-transition: all 900ms ease;
+        -webkit-transition: all 900ms ease;
+        -ms-transition: all 900ms ease;
+        -o-transition: all 900ms ease;
+        transition: 1.3s cubic-bezier(0.5, 0.5, 0, 1);
+        clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
 
         @include breakpoint (max-xxxl){
             img {

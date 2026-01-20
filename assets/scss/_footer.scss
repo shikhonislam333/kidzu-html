@@ -1,0 +1,206 @@
+.footer-section {
+    background-color: $bg-color;
+    position: relative;
+
+    .bear-shape {
+        position: absolute;
+        left: 0;
+        top: 18%;
+    }
+
+    .bag-shape {
+        position: absolute;
+        right: 0;
+        bottom: 30px;
+    }
+
+    .vec-shape {
+        position: absolute;
+        top: 15%;
+        right: 56px;
+        animation: rounded 5s linear infinite;
+    }
+
+    .bottom-shape {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .footer-text {
+        text-align: center;
+        position: relative;
+        z-index: 99;
+        padding-bottom: 20px;
+        padding-top: 15px;
+
+        b {
+            text-transform: capitalize;
+        }
+    }
+}
+
+.footer-info-wrapper {
+    border-bottom: 2px dashed rgba(56, 84, 105, 0.2);
+    padding-bottom: 40px;
+    padding-top: 90px;
+
+    .footer-content {
+        max-width: 350px;
+        margin-top: 30px;
+
+        .footer-logo {
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        .social-icon {
+            gap: 10px;
+            margin-top: 28px;
+
+            a {
+                display: inline-block;
+                width: 36px;
+                height: 36px;
+                line-height: 36px;
+                text-align: center;
+                border: 1px solid rgba(92, 112, 126, 0.25);
+                border-radius: 50%;
+                font-size: 14px;
+
+                &:hover {
+                    background-color: $theme-color;
+                    color: $white;
+                    border-color: $theme-color;
+                }
+            }
+        }
+    }
+
+    .footer-info-items {
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(56, 84, 105, 0.2);
+        border-radius: 40px;
+        padding: 30px;
+        position: relative;
+        margin-top: 30px;
+
+        .flag-img {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+        }
+
+        .title {
+            font-size: 20px;
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 22px;
+            text-transform: capitalize;
+
+            &::before {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: "";
+                width: 22px;
+                height: 2px;
+                background-color: $theme-color;
+                border-radius: 4px;
+            }
+
+            &::after {
+                position: absolute;
+                bottom: 0;
+                left: 28px;
+                content: "";
+                width: 64px;
+                height: 2px;
+                background-color: $header-color;
+                border-radius: 4px;
+            }
+        }
+
+        ul {
+            li {
+                @include flex;
+                gap: 10px;
+
+                &:not(:last-child){
+                    margin-bottom: 15px;
+                }
+
+                i {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+.footer-widget-wrapper {
+    padding: 40px 0 80px;
+
+    .footer-widget-items {
+        .widget-head {
+            padding-bottom: 15px;
+            margin-bottom: 22px;
+            position: relative;
+            
+            &::before {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: "";
+                width: 22px;
+                height: 2px;
+                background-color: $theme-color;
+                border-radius: 4px;
+            }
+
+            &::after {
+                position: absolute;
+                bottom: 0;
+                left: 28px;
+                content: "";
+                width: 64px;
+                height: 2px;
+                background-color: $header-color;
+                border-radius: 4px;
+            }
+
+            h3 {
+                font-size: 20px;
+                text-transform: capitalize;
+            }
+        }
+
+        .gt-list-area {
+            li {
+                @include transition;
+                text-transform: capitalize;
+
+                &:not(:last-child){
+                    margin-bottom: 15px;
+                }
+
+                a {
+                    color: $text-color;
+                }
+
+                &:hover {
+                    margin-left: 5px;
+
+                    a {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+}

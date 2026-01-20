@@ -185,24 +185,15 @@
 .instagram-wrapper {
     overflow: hidden;
     width: 100%;
+
+    .instagram-section {
+        display: flex;
+        gap: 20px;
+        width: max-content;
+        animation: instagramMarquee 45s linear infinite;
+    }
 }
 
-.instagram-section {
-    display: flex;
-    gap: 20px;
-    width: max-content;
-    animation: instagramMarquee 45s linear infinite;
-}
-
-.instagram-image {
-    position: relative;
-    min-width: 250px; /* image size control */
-}
-
-.instagram-image img {
-    width: 100%;
-    display: block;
-}
 
 @keyframes instagramMarquee {
     0% {

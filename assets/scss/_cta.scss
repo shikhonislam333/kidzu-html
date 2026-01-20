@@ -2,6 +2,42 @@
     position: relative;
     z-index: 9;
     padding: 120px 50px;
+    margin-bottom: 50px;
+    margin-top: 38px;
+
+    .border-shape {
+        position: absolute;
+        top: 20px;
+        left: 50px;
+        right: 0;
+        max-width: 1360px;
+        z-index: -1;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .vec-1 {
+        position: absolute;
+        right: 0;
+        top: -30px;
+        animation: rounded 5s linear infinite;
+        
+    }
+
+     .vec-2 {
+        position: absolute;
+        left: -20px;
+        bottom: -15px;
+        animation: rounded 5s linear infinite;
+    }
+
+    .vec-3 {
+        position: absolute;
+        left: 35px;
+        bottom: 60px;
+    }
 
     .newsletter-bg {
         mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1410 425"><path fill-rule="evenodd" clip-rule="evenodd" d="M47.8559 86.0209C54.8213 36.6825 97.0464 0 146.874 0H1263.13C1312.95 0 1355.18 36.6826 1362.14 86.021L1393.91 311.021C1402.41 371.213 1355.68 425 1294.89 425H115.109C54.3206 425 7.5935 371.213 16.0912 311.021L47.8559 86.0209Z" /></svg>');
@@ -64,5 +100,13 @@
                 color: $text-color;
             }
         }
+    }
+}
+
+.newsletter-section {
+    position: relative;
+
+    .zirap-shape {
+        position: absolute;
     }
 }

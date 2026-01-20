@@ -154,49 +154,79 @@
 		}
 	);
 
+     /* ================================
+      Custom Accordion Js Start
+    ================================ */
+
+   if ($('.accordion-box').length) {
+        $(".accordion-box").on('click', '.acc-btn', function () {
+            var outerBox = $(this).closest('.accordion-box');
+            var target = $(this).closest('.accordion');
+            var accBtn = $(this);
+            var accContent = accBtn.next('.acc-content');
+
+            if (target.hasClass('active-block')) {
+                // Already open, so close it
+                accBtn.removeClass('active');
+                target.removeClass('active-block');
+                accContent.slideUp(300);
+            } else {
+                // Close all others
+                outerBox.find('.accordion').removeClass('active-block');
+                outerBox.find('.acc-btn').removeClass('active');
+                outerBox.find('.acc-content').slideUp(300);
+
+                // Open clicked one
+                accBtn.addClass('active');
+                target.addClass('active-block');
+                accContent.slideDown(300);
+            }
+        });
+    }
+
 
   // Main Slider
-	// var slider = new Swiper('.hero-slider', {
-	// 	slidesPerView: 1,
-	// 	spaceBetween: 0,
-	// 	loop: true,
-	// 	autoplay: {
-	// 		enabled: true,
-	// 		delay: 6000
-	// 	},
-	// 	// Navigation arrows
-	// 	navigation: {
-	// 		nextEl: '.main-slider-next',
-	// 		prevEl: '.main-slider-prev',
-	// 		clickable: true,
-	// 	},
-	// 	//Pagination
-	// 	pagination: {
-	// 		el: ".slider-one_pagination",
-	// 		clickable: true,
-	// 	},
-	// 	speed: 500,
-	// 	breakpoints: {
-	// 		'1600': {
-	// 			slidesPerView: 1,
-	// 		},
-	// 		'1200': {
-	// 			slidesPerView: 1,
-	// 		},
-	// 		'992': {
-	// 			slidesPerView: 1,
-	// 		},
-	// 		'768': {
-	// 			slidesPerView: 1,
-	// 		},
-	// 		'576': {
-	// 			slidesPerView: 1,
-	// 		},
-	// 		'0': {
-	// 			slidesPerView: 1,
-	// 		},
-	// 	},
-	// });
+	var slider = new Swiper('.hero-slider', {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		loop: true,
+		autoplay: {
+			enabled: true,
+			delay: 6000
+		},
+		// Navigation arrows
+		navigation: {
+			nextEl: '.main-slider-next',
+			prevEl: '.main-slider-prev',
+			clickable: true,
+		},
+		//Pagination
+		pagination: {
+			el: ".slider-one_pagination",
+			clickable: true,
+		},
+		speed: 500,
+		breakpoints: {
+			'1600': {
+				slidesPerView: 1,
+			},
+			'1200': {
+				slidesPerView: 1,
+			},
+			'992': {
+				slidesPerView: 1,
+			},
+			'768': {
+				slidesPerView: 1,
+			},
+			'576': {
+				slidesPerView: 1,
+			},
+			'0': {
+				slidesPerView: 1,
+			},
+		},
+	});
 
      /* ================================
       Brand Slider Js Start
@@ -277,44 +307,42 @@
    }
 
     /* ================================
-      Feature Box Slider Js Start
+      Testimonial Slider Js Start
     ================================ */
-//    if ($('.feature-box-slider').length > 0) {
-//     const featureBoxSlider = new Swiper(".feature-box-slider", {
-//         spaceBetween: 30,
-//         speed: 1300,
-//         loop: true,
-//         autoplay: {
-//             delay: 2000,
-//             disableOnInteraction: false,
-//         },
-//         navigation: {
-//             nextEl: ".array-next",
-//             prevEl: ".array-prev",
-//         },
-//         pagination: {
-//             el: ".dot",
-//             clickable: true,
-//         },
-//         breakpoints: {
-//             1199: {
-//                 slidesPerView: 4,
-//             },
-//             991: {
-//                 slidesPerView: 3,
-//             },
-//             767: {
-//                 slidesPerView: 2,
-//             },
-//             575: {
-//                 slidesPerView: 1.5,
-//             },
-//             0: {
-//                 slidesPerView: 1.2,
-//             },
-//         },
-//     });
-//    }
+    if ($('.testimonial-slider').length > 0) {
+    const testimonialSlider = new Swiper(".testimonial-slider", {
+        spaceBetween: 30,
+        speed: 1300,
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".dot",
+            clickable: true,
+        },
+        breakpoints: {
+            
+            1199: {
+                slidesPerView: 4,
+            },
+            991: {
+                slidesPerView: 3,
+            },
+            767: {
+                slidesPerView: 2,
+            },
+            575: {
+                slidesPerView: 1.4,
+            },
+            0: {
+                slidesPerView: 1,
+            },
+        },
+    });
+   }
 
   
 
