@@ -228,7 +228,43 @@
 		},
 	});
 
-     /* ================================
+    /* ================================
+      Program Slider Js Start
+    ================================ */
+   if ($('.program-slider').length > 0) {
+    const programSlider = new Swiper(".program-slider", {
+        spaceBetween: 30,
+        speed: 1300,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".dot2",
+            clickable: true,
+        },
+        breakpoints: {
+            1199: {
+                slidesPerView: 3,
+            },
+            991: {
+                slidesPerView: 2,
+            },
+            767: {
+                slidesPerView: 1.5,
+            },
+            575: {
+                slidesPerView: 1,
+            },
+            0: {
+                slidesPerView: 1,
+            },
+        },
+    });
+   }
+
+    /* ================================
       Brand Slider Js Start
     ================================ */
 
@@ -579,6 +615,33 @@
     /* ================================
        Text Anim Js Start
     ================================ */
+
+    if ($('.bz-gsap-animate-circle').length) {
+  gsap.utils.toArray('.bz-gsap-animate-circle').forEach((el) => {
+
+    // Accessibility: reduced motion
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      gsap.set(el, { rotate: 0 });
+      return;
+    }
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: el,
+        scrub: 1,
+        start: "top 80%",
+        end: "top 20%",
+        markers: false
+      }
+    })
+    .set(el, { transformOrigin: "50% 50%" })
+    .fromTo(
+      el,
+      { rotate: 0 },
+      { rotate: 180, ease: "none" }
+    );
+  });
+}
 
   
 

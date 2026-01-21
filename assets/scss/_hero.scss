@@ -298,3 +298,140 @@
     }
 }
 
+.hero-2 {
+    background-color: #EFF5F6;
+    padding: 150px 0 190px;
+    position: relative;
+
+    .star {
+        position: absolute;
+        top: 15%;
+        left: 29%;
+        animation: rounded 5s linear infinite;
+    }
+
+    .star2 {
+        position: absolute;
+        top: 45%;
+        left: 42px;
+        animation: rounded 5s linear infinite;
+    }
+
+    .star3 {
+        position: absolute;
+        right: 44px;
+        top: 38%;
+        animation: rounded 5s linear infinite;
+    }
+
+    .vec-shape {
+        position: absolute;
+        left: 70px;
+        bottom: 80px;
+    }
+
+    .vec-shape2 {
+        position: absolute;
+        right: 16%;
+        top: 15%;
+    }
+
+    .vec-shape3 {
+        position: absolute;
+        bottom: 120px;
+        left: 47%;
+    }
+
+    .zirap-shape {
+        position: absolute;
+        bottom: 100px;
+        right: 0;
+        z-index: 1;
+    }
+
+    .line-shape {
+        position: absolute;
+        bottom: 0;
+        right: -2%;
+    }
+
+    .container {
+        max-width: 1545px;
+    }
+
+    .hero-image-items {
+        position: relative;
+        z-index: 9;
+
+        .shape1 {
+            position: absolute;
+            top: 35%;
+            left: 10%;
+        }
+
+        .shape2 {
+            position: absolute;
+            bottom: 10%;
+            left: 10%;
+        }
+
+        .shape3 {
+            position: absolute;
+            top: 22%;
+            left: 34%;
+        }
+
+        .hero-line {
+            position: absolute;
+            top: 50%;
+            left: 48%;
+            transform: translate(-50%,-50%);
+            z-index: -1;
+        }
+
+        .thumb {
+            position: relative;
+            max-width: 728px;
+            mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 738 512"><path fill-rule="evenodd" clip-rule="evenodd" d="M531.18 0.363281C456.2 -5.23801 407.491 55.4193 343.074 81.3193C311.295 94.0963 277.454 101.77 243.257 104.03C208.611 106.321 172.762 91.9081 137.262 93.7734C77.2798 96.9257 38.6293 159.006 18.8701 209.131C-17.8165 302.198 -7.28917 439.009 106.918 469.9C172.821 487.726 236.038 460.348 301.594 458.745C369.83 457.077 441.317 467.256 506.036 492.853C550.182 510.312 594.32 522.781 638.841 498.362C717.152 455.414 739.492 343.477 737.924 262.294C736.56 191.722 706.667 116.577 659.32 63.2402C627.059 26.8976 579.682 3.98729 531.18 0.363281Z" /></svg>');
+            mask-repeat: no-repeat;
+            mask-position: center center;
+            mask-size: cover;
+           
+    
+            img {
+                @include imgw;
+            }
+        }
+    }
+
+    .hero-content {
+        margin-left: 50px;
+
+        .hero-sub {
+            @include flex;
+            gap: 10px;
+            margin-bottom: 15px;
+
+            span {
+                text-transform: capitalize;
+                font-size: 15px;
+                font-weight: bold;
+                font-family: $sub-font;
+                color: $header-color;
+                line-height: 1.4;
+            }
+        }
+
+        p {
+            max-width: 592px;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .hero-button {
+            @include flex;
+            gap: 20px;
+            margin-top: 38px;
+        }
+    }
+}
