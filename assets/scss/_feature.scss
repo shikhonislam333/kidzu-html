@@ -382,3 +382,19 @@
         }
     }
 }
+
+.choose-us-section-2 {
+    position: relative;
+
+    .men-shape {
+        position: absolute;
+        left: 50px;
+        top: 25%;
+    }
+
+    .girl-shape {
+        position: absolute;
+        right: 45px;
+        bottom: 10%;
+    }
+}

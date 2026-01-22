@@ -2233,6 +2233,20 @@ span {
   animation: wobble 1.5s ease-in-out;
 }
 
+.choose-us-section-2 {
+  position: relative;
+}
+.choose-us-section-2 .men-shape {
+  position: absolute;
+  left: 50px;
+  top: 25%;
+}
+.choose-us-section-2 .girl-shape {
+  position: absolute;
+  right: 45px;
+  bottom: 10%;
+}
+
 .program-section {
   background-color: #F3F4FE;
   position: relative;
@@ -3082,11 +3096,15 @@ span {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 .choose-us-wrapper-2 .choose-us-content ul li {
   display: flex;
   align-items: center;
   gap: 20px;
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 35px;
 }
 .choose-us-wrapper-2 .choose-us-content ul li .icon {
   width: 56px;
@@ -3100,6 +3118,145 @@ span {
   font-size: 18px;
   text-transform: capitalize;
 }
+.choose-us-wrapper-2 .choose-us-content .skill-feature {
+  max-width: 690px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.choose-us-wrapper-2 .choose-us-content .skill-feature:not(:last-child) {
+  margin-bottom: 30px;
+}
+.choose-us-wrapper-2 .choose-us-content .skill-feature .box-title {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Quicksand", sans-serif;
+  color: var(--header);
+  text-transform: capitalize;
+}
+.choose-us-wrapper-2 .choose-us-content .skill-feature .progress-value {
+  margin-bottom: 10px;
+  color: var(--header);
+  text-transform: capitalize;
+}
+.choose-us-wrapper-2 .choose-us-content .skill-feature .progress {
+  position: relative;
+  height: 8px;
+  background-color: #FEF4DE;
+  border-radius: 0;
+  overflow: visible;
+  margin-top: 15px;
+  border-radius: 4px;
+}
+.choose-us-wrapper-2 .choose-us-content .skill-feature .progress-bar {
+  background-color: var(--theme);
+  height: 8px;
+  margin: 0;
+  border-radius: inherit;
+  overflow: visible;
+  position: relative;
+  margin-top: 0;
+  border-radius: 4px;
+}
+.choose-us-wrapper-2 .choose-us-content .skill-feature .progress-value {
+  position: absolute;
+  top: -38px;
+  right: -8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--header);
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+}
+
+.footer-kids-section {
+  margin: 0 60px;
+  background-size: auto !important;
+  position: relative;
+}
+.footer-kids-section .eating-yummy {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.footer-kids-section .section-title-area {
+  justify-content: start;
+  gap: 300px;
+}
+.footer-kids-section .section-title-area .client-sub {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.footer-kids-section .section-title-area .client-sub span {
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Kalam", cursive;
+  color: var(--header);
+  line-height: 1.4;
+}
+.footer-kids-section .food-shape1 {
+  position: absolute;
+  left: 10px;
+  bottom: 40px;
+}
+.footer-kids-section .food-shape2 {
+  position: absolute;
+  right: 200px;
+  top: 53px;
+}
+
+.footer-kids-box-items {
+  margin-top: 30px;
+  position: relative;
+}
+.footer-kids-box-items .bg-thumb {
+  position: relative;
+}
+.footer-kids-box-items .bg-thumb img {
+  width: 100%;
+  height: 100%;
+}
+.footer-kids-box-items .bg-thumb .food-img {
+  position: absolute;
+  bottom: 20px;
+  right: 80px;
+}
+.footer-kids-box-items .bg-thumb .food-img img {
+  width: initial;
+  height: initial;
+}
+.footer-kids-box-items .content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  right: 0;
+  padding-left: 65px;
+}
+.footer-kids-box-items .content .icon {
+  margin-bottom: 5px;
+  margin-left: 35px;
+}
+.footer-kids-box-items .content .title {
+  font-size: 24px;
+  font-weight: 700;
+}
+.footer-kids-box-items .content ul {
+  margin-top: 5px;
+}
+.footer-kids-box-items .content ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+.footer-kids-box-items .content ul li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
 .tetsimonial-box-items {
   position: relative;
   margin-top: 30px;
