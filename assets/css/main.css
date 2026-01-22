@@ -2800,6 +2800,41 @@ span {
 
 .program-section-2 {
   background-color: #E1F6FE;
+  position: relative;
+  margin-top: 72px;
+}
+.program-section-2 .top-line-1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -72px;
+}
+.program-section-2 .top-line-1 img {
+  width: 100%;
+}
+.program-section-2 .bottom-line-1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -72px;
+}
+.program-section-2 .bottom-line-1 img {
+  width: 100%;
+}
+.program-section-2 .star-shape {
+  position: absolute;
+  left: 3%;
+  top: 20%;
+}
+.program-section-2 .star-shape2 {
+  position: absolute;
+  right: 40px;
+  bottom: 25%;
+}
+.program-section-2 .cat-shape {
+  position: absolute;
+  left: 70px;
+  bottom: 15%;
 }
 
 .program-box-items-2 {
@@ -2945,6 +2980,126 @@ span {
   transform: rotateY(360deg);
 }
 
+.program-bottom-area {
+  border-top: 1px solid rgba(56, 84, 105, 0.2);
+  padding-top: 40px;
+  margin-top: 40px;
+}
+.program-bottom-area .title {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: center;
+}
+.program-bottom-area .program-button {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 35px;
+  justify-content: center;
+}
+.program-bottom-area .program-button .author-icon {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.program-bottom-area .program-button .author-icon .icon {
+  width: 56px;
+  line-height: 59px;
+  height: 59px;
+  text-align: center;
+  background-color: var(--header);
+  text-align: center;
+  color: var(--white);
+  border-radius: 15px;
+  position: relative;
+}
+.program-bottom-area .program-button .author-icon .content h4 {
+  font-weight: 700;
+  font-size: 24px;
+}
+.program-bottom-area .program-button .author-icon .content h4 a {
+  color: var(--text);
+}
+.program-bottom-area .program-button .author-icon .content h4 a:hover {
+  color: var(--theme);
+}
+.program-bottom-area .program-button .author-icon .content span {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--header);
+  font-family: "Source Sans 3", sans-serif;
+  margin-bottom: 5px;
+}
+
+.choose-us-wrapper-2 .choose-us-thumb {
+  position: relative;
+  z-index: 9;
+}
+.choose-us-wrapper-2 .choose-us-thumb .shape1 {
+  position: absolute;
+  top: 6%;
+  left: 16%;
+  z-index: 11;
+}
+.choose-us-wrapper-2 .choose-us-thumb::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: var(--theme);
+  z-index: -1;
+  max-width: 623px;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 624 585"><path fill-rule="evenodd" clip-rule="evenodd" d="M456.618 101.994C486.213 5.80322 299.386 -66.341 295.685 96.4463C186.545 13.2033 66.311 105.693 162.499 224.082C-24.33 198.184 -37.2802 401.666 58.909 471.957C20.0638 518.199 86.6554 564.444 123.654 514.501C232.792 625.49 523.21 599.592 525.061 475.655C621.252 523.755 650.851 383.166 562.055 325.821C685.994 285.124 591.651 177.84 547.261 175.986C630.499 116.793 491.765 52.0478 456.618 101.994Z" /></svg>');
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  mask-size: cover;
+  z-index: 9;
+  left: 30px;
+}
+.choose-us-wrapper-2 .choose-us-thumb .thumb {
+  max-width: 623px;
+  position: relative;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 624 585"><path fill-rule="evenodd" clip-rule="evenodd" d="M456.618 101.994C486.213 5.80322 299.386 -66.341 295.685 96.4463C186.545 13.2033 66.311 105.693 162.499 224.082C-24.33 198.184 -37.2802 401.666 58.909 471.957C20.0638 518.199 86.6554 564.444 123.654 514.501C232.792 625.49 523.21 599.592 525.061 475.655C621.252 523.755 650.851 383.166 562.055 325.821C685.994 285.124 591.651 177.84 547.261 175.986C630.499 116.793 491.765 52.0478 456.618 101.994Z" /></svg>');
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  mask-size: cover;
+  z-index: 9;
+}
+.choose-us-wrapper-2 .choose-us-thumb .thumb img {
+  width: 100%;
+  height: 100%;
+}
+.choose-us-wrapper-2 .choose-us-content .choose-text {
+  margin-top: 30px;
+}
+.choose-us-wrapper-2 .choose-us-content ul {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.choose-us-wrapper-2 .choose-us-content ul li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.choose-us-wrapper-2 .choose-us-content ul li .icon {
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #E1F6FE;
+}
+.choose-us-wrapper-2 .choose-us-content ul li .title .icon-title {
+  font-size: 18px;
+  text-transform: capitalize;
+}
 .tetsimonial-box-items {
   position: relative;
   margin-top: 30px;
