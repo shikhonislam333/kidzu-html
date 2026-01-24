@@ -32,3 +32,44 @@
     }
 }
 
+.testimonial-box-items-2 {
+    margin-top: 50px;
+    position: relative;
+
+    .content {
+        text-align: center;
+        position: absolute;
+        top: -25px;
+        left: 0;
+        right: 0;
+
+        .client-image {
+            margin-bottom: 10px;
+            transition: all 900ms ease;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 600;
+            max-width: 230px;
+            text-transform: capitalize;
+            font-style: italic;
+            margin: 0 auto;
+            color: $header-color;
+        }
+    }
+
+    &:hover {
+        .content {
+            .client-image {
+                transform: rotateY(360deg);
+            }
+        }
+    }
+}

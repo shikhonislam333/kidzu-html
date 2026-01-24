@@ -1184,3 +1184,148 @@
         }
     }
 }
+
+.extra-activities-slider {
+    margin-left: -16%;
+}
+
+.extra-activities-box-2 {
+    margin-top: 30px;
+    @include flex;
+    gap: 30px;
+
+    .thumb {
+        border-radius: 60px;
+        position: relative;
+        overflow: hidden;
+        height: 414px;
+
+         img {
+            @include imgw;
+            border-radius: 60px;
+            display: block;
+            object-fit: cover;
+            -webkit-transition: all 500ms ease;
+            transition: all 500ms ease;
+
+            &:first-child{
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1;
+                -webkit-transform: translateX(50%) scaleX(2);
+                transform: translate(50%) scaleX(2);
+                opacity: 0;
+                -webkit-filter: blur(10px);
+                filter: blur(10px)
+            }
+        }
+    }
+
+    .content {
+        padding: 30px;
+        border: 1px dashed $theme-color;
+        border-radius: 40px;
+        max-width: 380px;
+
+        .title {
+            text-transform: capitalize;
+            font-size: 30px;
+            font-weight: 700;
+            margin-top: 15px;
+            margin-bottom: 10px;
+
+            a {
+                background-position: 0 95%;
+                background-repeat: no-repeat;
+                background-size: 0% 2px;
+                display: inline;
+
+                &:hover {
+                    color: $theme-color;
+                    background-size: 100% 2px;
+                    background-image: linear-gradient(180deg, $theme-color 0%, $theme-color 100%);
+                }
+            }
+        }
+
+        .arrow-btn {
+            margin-top: 20px;
+
+            .icons {
+                position: relative;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+
+                    path {
+                        @include transition;
+
+                        fill: $theme-color;
+                    }
+                }
+
+                .bg {
+                    display: inline-block;
+                    width: 55px;
+                    height: 41px;
+                    mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 41"><path fill-rule="evenodd" clip-rule="evenodd" d="M-1.31134e-06 26C-2.56668e-06 11.6406 11.6406 3.7906e-06 26 2.53526e-06C40.3594 1.27992e-06 55 11.6406 55 26C55 40.3594 40.3594 41 26 41C11.6406 41 -5.60027e-08 40.3594 -1.31134e-06 26Z" /></svg>');
+                    mask-repeat: no-repeat;
+                    mask-position: center center;
+                    mask-size: cover;
+                    background: $header-color;
+                    @include transition;
+                }
+
+                &:hover {
+                    .bg {
+                        background-color: $theme-color;
+                    }
+
+                    svg path {
+                        fill: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .thumb {
+             img {
+                &:first-child {
+                    -webkit-transform: translateX(0) scaleX(1);
+                    transform: translate(0) scaleX(1);
+                    opacity: 1;
+                    -webkit-filter: blur(0);
+                    filter: blur(0)
+                }
+
+                &:nth-child(2){
+                    -webkit-transform: translateX(-50%) scaleX(2);
+                    transform: translateX(-50%) scaleX(2);
+                    opacity: 0;
+                    -webkit-filter: blur(10px);
+                    filter: blur(10px);
+                }
+            } 
+        }
+
+        .content {
+            .icon {
+                img {
+                    animation: wobble 1.5s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+.extra-activities-section-2 {
+    margin-top: -15px;
+}

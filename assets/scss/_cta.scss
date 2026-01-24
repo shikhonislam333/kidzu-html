@@ -101,6 +101,39 @@
             }
         }
     }
+
+    &.style-2 {
+        padding: 100px 50px;
+        position: relative;
+
+        .plane-1 {
+            position: absolute;
+            top: 70px;
+            left: 120px;
+            z-index: 1;
+        }
+
+        .flower-shape {
+            position: absolute;
+            bottom: 60px;
+            left: 90px;
+            z-index: 9;
+        }
+
+        .newsletter-bg {
+            background-color: #E6E8FC;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
 }
 
 .newsletter-section {
@@ -108,5 +141,17 @@
 
     .zirap-shape {
         position: absolute;
+    }
+
+    .line-shape {
+        position: absolute;
+        left: 0;
+        top: -30%;
+    }
+
+    .line-shape2 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
     }
 }

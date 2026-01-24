@@ -398,3 +398,108 @@
         bottom: 10%;
     }
 }
+
+.values-section-2 {
+    // background-color: #E6E8FC;
+}
+
+.values-wrapper-2 {
+    .values-list {
+        margin-top: 30px;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            border-radius: 35px;
+            background-color: $white;
+            @include transition;
+
+            &:not(:last-child){
+                margin-bottom: 30px;
+            }
+
+            .icon {
+                width: 56px;
+                height: 56px;
+                line-height: 56px;
+                text-align: center;
+                border-radius: 50%;
+                background-color: #FEF4DE;
+            }
+
+            .content {
+                .title {
+                    font-size: 18px;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                }
+            }
+
+            &.active {
+                background-color: $theme-color;
+
+                .content {
+                    .title {
+                        color: $white;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .thumb {
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+
+.special-offer-wrapper {
+    position: relative;
+    .border-shape {
+        img {
+            @include imgw;
+        }
+    }
+
+    .special-offer-image {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        margin-left: 20px;
+        width: calc(100% - 40px);
+
+        .thumb {
+            position: relative;
+            max-width: 1410px;
+            mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1410 490"><path fill-rule="evenodd" clip-rule="evenodd"  d="M0 98.0954C0 66.3286 24.7602 40.067 56.472 38.1991L705 0L1353.53 38.1992C1385.24 40.067 1410 66.3285 1410 98.0953V399.54C1410 431.579 1384.83 457.966 1352.82 459.474L705 490L57.1758 459.474C25.1722 457.966 0 431.579 0 399.54V98.0954Z" /></svg>');
+            mask-repeat: no-repeat;
+            mask-position: center center;
+            mask-size: cover;
+
+            &::before {
+                @include before;
+                background: #385469;
+                opacity: 0.7;
+                z-index: 1;
+            }
+    
+            img {
+                @include imgw;
+            }
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            z-index: 99;
+        }
+    }
+}

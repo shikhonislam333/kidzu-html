@@ -144,11 +144,11 @@
       Hover Active Js Start
     ================================ */
 
-    $(".activities-wrapper-items").hover(
+    $(".activities-wrapper-items, .values-list li ").hover(
 		// Function to run when the mouse enters the element
 		function () {
 			// Remove the "active" class from all elements
-			$(".activities-wrapper-items").removeClass("active");
+			$(".activities-wrapper-items, .values-list li").removeClass("active");
 			// Add the "active" class to the currently hovered element
 			$(this).addClass("active");
 		}
@@ -248,6 +248,39 @@
             1199: {
                 slidesPerView: 3,
             },
+            991: {
+                slidesPerView: 2,
+            },
+            767: {
+                slidesPerView: 1.5,
+            },
+            575: {
+                slidesPerView: 1,
+            },
+            0: {
+                slidesPerView: 1,
+            },
+        },
+    });
+   }
+
+   /* ================================
+      Program Slider Js Start
+    ================================ */
+   if ($('.extra-activities-slider').length > 0) {
+    const extraActivitiesSlider = new Swiper(".extra-activities-slider", {
+        spaceBetween: 30,
+        speed: 1300,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".dot",
+            clickable: true,
+        },
+        breakpoints: {
             991: {
                 slidesPerView: 2,
             },
@@ -380,6 +413,78 @@
     });
    }
 
+    if ($('.testimonial-slider-2').length > 0) {
+    const testimonialSlider2 = new Swiper(".testimonial-slider-2", {
+        spaceBetween: 30,
+        speed: 1300,
+        loop: true,
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".dot01",
+            clickable: true,
+        },
+        breakpoints: {
+            
+            1199: {
+                slidesPerView: 4,
+            },
+            991: {
+                slidesPerView: 3,
+            },
+            767: {
+                slidesPerView: 2,
+            },
+            575: {
+                slidesPerView: 1.4,
+            },
+            0: {
+                slidesPerView: 1,
+            },
+        },
+    });
+   }
+
+   /* ================================
+      News Slider Js Start
+    ================================ */
+
+   if ($('.news-slider').length > 0) {
+    const newsSlider = new Swiper(".news-slider", {
+        spaceBetween: 30,
+        speed: 1300,
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+      pagination: {
+            el: ".dot0",
+            clickable: true,
+        },
+        breakpoints: {
+            
+            1199: {
+                slidesPerView: 4,
+            },
+            991: {
+                slidesPerView: 3,
+            },
+            767: {
+                slidesPerView: 2,
+            },
+            575: {
+                slidesPerView: 1.4,
+            },
+            0: {
+                slidesPerView: 1,
+            },
+        },
+    });
+   }
   
 
     /* ================================
