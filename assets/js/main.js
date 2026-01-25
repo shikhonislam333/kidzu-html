@@ -350,9 +350,9 @@
             delay: 2000,
             disableOnInteraction: false,
         },
-        navigation: {
-            nextEl: ".array-next",
-            prevEl: ".array-prev",
+      pagination: {
+            el: ".dotss",
+            clickable: true,
         },
         breakpoints: {
             
@@ -485,7 +485,31 @@
         },
     });
    }
-  
+   
+/* ================================
+      Team Hover Js Start
+    ================================ */
+
+    if (document.querySelectorAll(".team-main-items").length) {
+
+        const teamItems = document.querySelectorAll(".team-main-items");
+
+        teamItems.forEach((item) => {
+            item.addEventListener("mouseenter", function () {
+
+                // remove active from all
+                teamItems.forEach((el) => {
+                    el.classList.remove("active");
+                });
+
+                // add active to hovered item
+                this.classList.add("active");
+            });
+        });
+
+    }
+
+
 
     /* ================================
         Mouse Cursor Animation Js Start
@@ -663,6 +687,27 @@
         });
     }
 
+    if ($(".text-anim").length) {
+		let staggerAmount = 0.03,
+			translateXValue = 20,
+			delayValue = 0.1,
+			easeType = "power2.out",
+			animatedTextElements = document.querySelectorAll(".text-anim");
+
+		animatedTextElements.forEach(element => {
+			let animationSplitText = new SplitText(element, { type: "chars, words" });
+			gsap.from(animationSplitText.chars, {
+				duration: 1,
+				delay: delayValue,
+				x: translateXValue,
+				autoAlpha: 0,
+				stagger: staggerAmount,
+				ease: easeType,
+				scrollTrigger: { trigger: element, start: "top 85%" },
+			});
+		});
+	}
+
      /* ================================
        Sticky Js Start
     ================================ */
@@ -722,31 +767,31 @@
     ================================ */
 
     if ($('.bz-gsap-animate-circle').length) {
-  gsap.utils.toArray('.bz-gsap-animate-circle').forEach((el) => {
+    gsap.utils.toArray('.bz-gsap-animate-circle').forEach((el) => {
 
-    // Accessibility: reduced motion
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      gsap.set(el, { rotate: 0 });
-      return;
+        // Accessibility: reduced motion
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        gsap.set(el, { rotate: 0 });
+        return;
+        }
+
+        gsap.timeline({
+        scrollTrigger: {
+            trigger: el,
+            scrub: 1,
+            start: "top 80%",
+            end: "top 20%",
+            markers: false
+        }
+        })
+        .set(el, { transformOrigin: "50% 50%" })
+        .fromTo(
+        el,
+        { rotate: 0 },
+        { rotate: 180, ease: "none" }
+        );
+    });
     }
-
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: el,
-        scrub: 1,
-        start: "top 80%",
-        end: "top 20%",
-        markers: false
-      }
-    })
-    .set(el, { transformOrigin: "50% 50%" })
-    .fromTo(
-      el,
-      { rotate: 0 },
-      { rotate: 180, ease: "none" }
-    );
-  });
-}
 
   
 

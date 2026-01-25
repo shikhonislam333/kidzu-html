@@ -48,7 +48,7 @@
   display: flex;
   overflow: hidden;
   user-select: none;
-  gap: 0;
+  gap: 10px;
   margin-bottom: 40px;
 
   .marquee-group {
@@ -1328,4 +1328,14 @@
 
 .extra-activities-section-2 {
     margin-top: -15px;
+}
+
+.schedule-section {
+    position: relative;
+
+    .vec-5 {
+        position: absolute;
+        left: 40px;
+        bottom: 150px;
+    }
 }

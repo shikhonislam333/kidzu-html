@@ -73,3 +73,19 @@
         }
     }
 }
+
+.testimonial-section-2 {
+    position: relative;
+
+    .girl-shape {
+        position: absolute;
+        top: 25%;
+        left: 60px;
+    }
+
+    .zirap-shape {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}

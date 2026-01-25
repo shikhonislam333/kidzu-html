@@ -155,3 +155,19 @@
         bottom: 0;
     }
 }
+
+.special-offer-section {
+    position: relative;
+
+    .tree-shape {
+        position: absolute;
+        left: 53px;
+        top: 0;
+    }
+
+    .doll-shape {
+        position: absolute;
+        bottom: -12%;
+        right: 12%;
+    }
+}

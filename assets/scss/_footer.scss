@@ -1,6 +1,18 @@
 .footer-section {
     background-color: $bg-color;
     position: relative;
+    margin-top: 50px;
+
+    .footer-top {
+        position: absolute;
+        top: -50px;
+        left: 0;
+        right: 0;
+
+        img {
+            width: 100%;
+        }
+    }
 
     .bear-shape {
         position: absolute;

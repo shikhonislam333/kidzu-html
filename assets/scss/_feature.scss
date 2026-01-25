@@ -400,7 +400,50 @@
 }
 
 .values-section-2 {
-    // background-color: #E6E8FC;
+    background-color: #E6E8FC;
+    position: relative;
+    margin-top: 152px;
+
+    .shape {
+        position: absolute;
+        top: 0;
+        left: 120px;
+    }
+
+    .love-shape {
+        position: absolute;
+        bottom: 20%;
+        right: 80px;
+    }
+
+    .top-line {
+        position: absolute;
+        top: -160px;
+        left: 0;
+        right: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .bottom-line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .plane-shape {
+        position: absolute;
+        right: 5%;
+        top: -18%;
+    }
 }
 
 .values-wrapper-2 {
@@ -453,6 +496,21 @@
     .thumb {
         text-align: center;
         margin-top: 30px;
+        position: relative;
+
+        .line-1 {
+            position: absolute;
+            top: 45%;
+            left: 20px;
+            transform: translateY(-50%);
+        }
+
+        .line-2 {
+            position: absolute;
+            top: 45%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
     }
 }
 

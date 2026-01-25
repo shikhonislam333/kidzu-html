@@ -3,6 +3,14 @@
     z-index: 9;
     margin: 0 60px;
     margin-bottom: 110px;
+    
+
+    .about-line {
+        position: absolute;
+        bottom: -110px;
+        right: -20px;
+        z-index: -1;
+    }
 
     .bg-shape {
         position: absolute;
@@ -141,6 +149,7 @@
 .about-section {
     position: relative;
 
+
     .about-vec {
         position: absolute;
         left: 28%;
@@ -167,6 +176,19 @@
 
 .book-admission-content {
     position: relative;
+    max-width: 610px;
+
+    .vec-1 {
+        position: absolute;
+        bottom: -50px;
+        left: 5px;
+    }
+
+    .vec-2 {
+        position: absolute;
+        bottom: 10%;
+        right: -25px;
+    }
 
     .bg-shape {
         max-width: 610px;
