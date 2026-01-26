@@ -4,11 +4,29 @@
     margin-top: 130px;
     margin-bottom: 180px;
 
+    @include breakpoint (max-xxl){
+        padding: 120px 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    @include breakpoint (max-xl){
+       padding: 100px 0;
+    }
+
+    @include breakpoint (max-lg){
+        padding: 80px 0;
+    }
+
     .top-line {
         position: absolute;
         top: -150px;
         left: 0;
         right: 0;
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
 
         img {
             width: 100%;
@@ -20,6 +38,10 @@
         bottom: -185px;
         left: 0;
         right: 0;
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
 
         img {
             width: 100%;
@@ -198,11 +220,19 @@
     position: relative;
     z-index: 9;
 
+    @include breakpoint (max-md){
+        padding: 40px 30px;
+    }
+
     .swiper-dot {
         position: absolute;
         top: 50%;
         right: 0;
         transform: translateY(-50%) rotate(90deg);
+
+        @include breakpoint (max-sm){
+            display: none;
+        }
     }
 
     .border-shape {
@@ -212,6 +242,10 @@
         bottom: 0;
         z-index: -1;
         right: -18px;
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
 
         img {
             width: 100%;
@@ -236,10 +270,20 @@
         right: 0;
         bottom: 0;
         z-index: -1;
+
+        @include breakpoint (max-xxl){
+            mask: none;
+            border-radius: 16px;
+        }
     }
 
     .program-main-box-items {
         position: relative;
+
+        @include breakpoint (max-xxl){
+            max-width: 358px;
+            margin: 0 auto;
+        }
 
         .arrow-btn {
             text-align: center;
@@ -301,6 +345,10 @@
         position: relative;
         padding-bottom: 24px;
 
+        @include breakpoint (max-sm){
+            margin-bottom: 20px;
+        }
+
         .item-bg {
             position: absolute;
             mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 456"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.0247019 112.899C-1.09488 62.1531 35.9801 18.618 86.2563 11.6418L163.317 0.949098C172.436 -0.316243 181.686 -0.316246 190.805 0.949095L267.865 11.6418C318.141 18.618 355.216 62.1531 354.097 112.899L350.983 254.042L353.164 352.91C354.621 418.954 292.777 468.238 228.725 452.077L201.524 445.214C185.467 441.163 168.655 441.163 152.597 445.214L125.397 452.077C61.3442 468.238 -0.49969 418.954 0.957419 352.91L3.13871 254.042L0.0247019 112.899Z" /></svg>');
@@ -317,6 +365,11 @@
             z-index: -1;
             margin: 0 auto;
             max-width: 360px;
+
+            @include breakpoint (max-sm){
+                mask: none;
+                border-radius: 16px;
+            }
 
             &.bg-2 {
                 background-color: #FEF4DE;
@@ -381,6 +434,14 @@
             h2 {
                 font-size: 22px;
                 margin-bottom: 10px;
+
+                @include breakpoint (max-sm){
+                    font-size: 18px;
+                }
+
+                @include breakpoint (max-xxs){
+                    font-size: 16px;
+                }
 
                 a {
                     &:hover {
@@ -447,6 +508,22 @@
     position: relative;
     z-index: 9;
 
+    @include breakpoint (max-xxxl){
+        margin: 0 40px;
+    }
+
+    @include breakpoint (max-xxl){
+        margin: 0 30px;
+    }
+
+    @include breakpoint (max-xl){
+        margin: 0 20px;
+    }
+
+    @include breakpoint (max-xxs){
+        margin: 0 16px;
+    }
+
     .activities-shape {
         position: absolute;
         bottom: 55px;
@@ -456,22 +533,6 @@
         img {
             width: 100%;
         }
-    }
-
-    .bg-image {
-        position: absolute;
-        mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1800 1144'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 100.006C0 41.7213 49.6451 -4.21244 107.754 0.307164L900 61.9263L1698.89 53.0497C1754.55 52.4313 1800 97.3807 1800 153.044V720.926V1043.04C1800 1100.88 1751.07 1146.66 1693.35 1142.82L900 1089.93H100C44.7715 1089.93 0 1045.15 0 989.926V100.006Z'/%3E%3C/svg%3E") no-repeat center / contain;
-        mask-repeat: no-repeat;
-        mask-position: center center;
-        mask-size: cover;
-        background: #E1F6FE;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
     }
 }
 
@@ -518,6 +579,10 @@
             line-height: 1;
             text-transform: capitalize;
 
+            @include breakpoint (max-xxl){
+                font-size: 24px;
+            }
+
             a {
                 background-position: 0 95%;
                 background-repeat: no-repeat;
@@ -543,6 +608,10 @@
         height: 100%;
         position: relative;
         overflow: hidden;
+
+        @include breakpoint (max-xxl){
+           max-width: 325px;
+        }
 
         img {
             @include imgw;
