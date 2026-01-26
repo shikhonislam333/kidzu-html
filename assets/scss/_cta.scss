@@ -5,6 +5,20 @@
     margin-bottom: 50px;
     margin-top: 38px;
 
+    @include breakpoint (max-xxl){
+        padding-top: 60px;
+    }
+
+    @include breakpoint (max-xl){
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 60px 40px;
+    }
+
+    @include breakpoint (max-md){
+        padding: 50px 30px;
+    }
+
     .border-shape {
         position: absolute;
         top: 20px;
@@ -12,6 +26,10 @@
         right: 0;
         max-width: 1360px;
         z-index: -1;
+
+        @include breakpoint (max-xl){
+           display: none;
+        }
 
         img {
             width: 100%;
@@ -23,6 +41,10 @@
         right: 0;
         top: -30px;
         animation: rounded 5s linear infinite;
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
         
     }
 
@@ -31,12 +53,20 @@
         left: -20px;
         bottom: -15px;
         animation: rounded 5s linear infinite;
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
     }
 
     .vec-3 {
         position: absolute;
         left: 35px;
         bottom: 60px;
+
+        @include breakpoint (max-xl){
+            opacity: .3;
+        }
     }
 
     .newsletter-bg {
@@ -48,10 +78,21 @@
         top: 0;
         left: 0;
 
+        @include breakpoint (max-xl){
+            mask: none;
+            border-radius: 16px;
+            bottom: 0;
+            overflow: hidden;
+        }
+
         &::before {
             @include before;
             background: #385469;
             opacity: 0.8;
+
+            @include breakpoint (max-xl){
+                border-radius: 16px;
+            }
         }
         
         img {
@@ -74,6 +115,10 @@
                 position: absolute;
                 left: 22px;
                 top: 20px;
+
+                @include breakpoint (max-sm){
+                    top: 16px;
+                }
             }
 
             .subscribe-btn {
@@ -87,6 +132,19 @@
                 top: 0;
                 right: 0;
                 line-height: 1;
+
+                @include breakpoint (max-sm){
+                    position: static;
+                    width: 100%;
+                    height: 60px;
+                    line-height: 60px;
+                    padding: 0 18px;
+                    margin-top: 10px;
+                }
+
+                &:hover {
+                    background-color: $header-color;
+                }
             }
 
             input {
@@ -98,6 +156,11 @@
                 border-radius: 100px;
                 padding-left: 56px;
                 color: $text-color;
+
+                @include breakpoint (max-xl){
+                    height: 60px;
+                    line-height: 60px;
+                }
             }
         }
     }

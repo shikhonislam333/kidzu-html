@@ -423,6 +423,10 @@
             width: 264px;
             height: 1px;
             background-color: rgba(92, 112, 126, .20);
+
+            @include breakpoint (max-lg){
+                width: 100px;
+            }
         }
         p {
             text-align: center;
@@ -431,14 +435,34 @@
             color: $theme-color;
             text-transform: capitalize;
             font-family: $sub-font;
+
+              @include breakpoint (max-lg){
+                font-size: 15px;
+            }
         }
     }
 }
 
 .school-facilities-wrapper {
-     display: grid;
+    display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 30px;
+
+    @include breakpoint (max-xl){
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    @include breakpoint (max-lg){
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include breakpoint (max-md){
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint (max-sm){
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .school-facilities-box-items {
         text-align: center;
@@ -452,11 +476,19 @@
                 position: absolute;
                 top: 53%;
                 left: 50%;
-                transform: translate(-50%, -50%)
-                ;
+                transform: translate(-50%, -50%);
+
                 img {
                     width: initial;
                     height: initial;
+
+                    @include breakpoint (max-md){
+                        width: 48px;
+                    }
+
+                     @include breakpoint (max-xxs){
+                        width: 40px;
+                    }
                 }
             }
 
@@ -470,6 +502,14 @@
             font-weight: 700;
             text-transform: capitalize;
             margin-top: 20px;
+
+             @include breakpoint (max-xxl){
+                font-size: 18px;
+            }
+
+            @include breakpoint (max-xxs){
+                font-size: 16px;
+            }
         }
 
         &:hover {

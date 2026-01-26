@@ -4,11 +4,36 @@
     z-index: 99;
     margin-top: 135px;
 
+    @include breakpoint (max-xl4){
+        margin-top: 100px;
+    }
+
+    @include breakpoint (max-xxl){
+        margin-top: 0;
+        padding: 120px 0;
+    }
+
+    @include breakpoint (max-xl){
+        padding: 100px 0;
+    }
+
+    @include breakpoint (max-lg){
+        padding: 80px 0;
+    }
+
     .top-shape {
         position: absolute;
         top: -135px;
         left: 0;
         right: 0;
+
+        @include breakpoint (max-xl4){
+            top: -100px;
+        }
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
 
         img {
             width: 100%;
@@ -22,6 +47,14 @@
         right: 0;
         z-index: 9;
 
+        @include breakpoint (max-xl4){
+            bottom: -60px;
+        }
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
+
         img {
             width: 100%;
         }
@@ -32,10 +65,20 @@
         bottom: -60px;
         right: 0;
         z-index: 9;
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
     }
 
     .faq-image {
         position: relative;
+
+        @include breakpoint (max-xxl){
+            img {
+                @include imgw;
+            }
+        }
 
         &.style-2 {
             max-width: 718px;
@@ -65,6 +108,10 @@
 .faq-content-1 {
     margin-top: -160px;
 
+    @include breakpoint (max-xxl){
+        margin-top: 0;
+    }
+
     .faq-text {
         margin-top: 30px;
         font-size: 18px;
@@ -73,6 +120,10 @@
     .accordion-box {
         position: relative;
         margin-top: 35px;
+
+        @include breakpoint (max-xl){
+            margin-top: 25px;
+        }
 
         .block {
             position: relative;
@@ -83,6 +134,10 @@
             border-radius: 25px;
             background-color: $white;
             padding: 20px 30px;
+
+            @include breakpoint (max-xxs){
+                padding: 27px 24px;
+            }
 
             .acc-btn {
                 position: relative;
@@ -95,8 +150,13 @@
                 -webkit-transition: all 500ms ease;
                 transition: all 500ms ease;
 
-                @include breakpoint (max-xxs){
+                @include breakpoint (max-xl){
                     font-size: 20px;
+                }
+
+                 @include breakpoint (max-xxs){
+                    font-size: 17px;
+                   padding-right: 30px;
                 }
 
                 .number {

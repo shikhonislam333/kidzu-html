@@ -1,14 +1,33 @@
 .news-section {
     background-color: #E6E8FC;
     position: relative;
-    margin-top: 150px;
+    margin-top: 110px;
     margin-bottom: 150px;
+
+    @include breakpoint (max-xxl){
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    @include breakpoint (max-xl){
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 100px 0;
+    }
+
+    @include breakpoint (max-lg){
+        padding: 80px 0;
+    }
 
     .top-line-1 {
         position: absolute;
         top: -180px;
         left: 0;
         right: 0;
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
 
         img {
             width: 100%;
@@ -20,6 +39,18 @@
         bottom: -180px;
         left: 0;
         right: 0;
+
+        @include breakpoint (max-xxxl){
+            bottom: -150px;
+        }
+
+        @include breakpoint (max-xxl){
+            bottom: -100px;
+        }
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
 
         img {
             width: 100%;
@@ -34,6 +65,10 @@
     border-radius: 40px;
     position: relative;
     z-index: 99;
+
+    @include breakpoint (max-xl){
+        padding: 20px;
+    }
 
     .thumb {
         overflow: hidden;
@@ -71,6 +106,10 @@
             gap: 10px;
             margin-bottom: 15px;
 
+            @include breakpoint (max-lg){
+                flex-wrap: wrap;
+            }
+
             li {
                 border: 1px solid rgba(56, 84, 105, 0.2);
                 border-radius: 8px;
@@ -78,7 +117,11 @@
                 line-height: 1;
                 gap: 10px;
                 @include flex;
-                gap: 10px;
+
+                @include breakpoint (max-xxl){
+                   font-size: 14px;
+                   gap: 6px;
+                }
 
                 i {
                     color: $theme-color;
@@ -87,6 +130,26 @@
         }
 
         h3 {
+            @include breakpoint (max-xxl){
+                font-size: 18px;
+            }
+
+            @include breakpoint (max-xl){
+                font-size: 21px;
+            }
+
+            @include breakpoint (max-lg){
+                font-size: 18px;
+            }
+
+            @include breakpoint (max-md){
+                font-size: 22px;
+            }
+
+            @include breakpoint (max-xxs){
+                font-size: 20px;
+            }
+
              a {
                   background-position: 0 95%;
                   background-repeat: no-repeat;
