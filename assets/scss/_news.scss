@@ -240,6 +240,10 @@
     position: relative;
     z-index: 99;
 
+    @include breakpoint (max-md){
+        font-size: 20px;
+    }
+
     .thumb {
         overflow: hidden;
         position: relative;
@@ -285,6 +289,11 @@
                 @include flex;
                 gap: 10px;
 
+                 @include breakpoint (max-xxxl){
+                   font-size: 14px;
+                   gap: 6px;
+                }
+
                 i {
                     color: $theme-color;
                 }
@@ -292,6 +301,13 @@
         }
 
         h3 {
+             @include breakpoint (max-xl4){
+                font-size: 18px;
+            }
+
+            @include breakpoint (max-xl){
+                font-size: 21px;
+            }
              a {
                   background-position: 0 95%;
                   background-repeat: no-repeat;
@@ -311,6 +327,13 @@
             @include transition;
             opacity: 0;
             visibility: hidden;
+
+            @include breakpoint (max-xl){
+               font-size: 15px;
+               opacity: 1;
+               visibility: visible;
+               margin-top: 7px;
+            }
         }
 
         .arrow-btn {
@@ -391,6 +414,28 @@
 .news-section-2 {
   position: relative;
 
+    @include breakpoint (max-xxl){
+        margin: 0 30px;
+        background-image: none !important;
+        background-color: #FEDFEF;
+        border-radius: 16px;
+        margin-bottom: 120px;
+    }
+
+    @include breakpoint (max-xl){
+        margin: 0 20px;
+        margin-bottom: 100px;
+    }
+
+    @include breakpoint (max-lg){
+        margin-bottom: 80px;
+    }
+
+    @include breakpoint (max-xxs){
+        margin: 0 16px;
+        margin-bottom: 80px;
+    }
+
   .news-bg {
     position: absolute;
     top: 0;
@@ -398,6 +443,10 @@
     left: 60px;
     right: 0;
     width: calc(100% - 100px);
+
+    @include breakpoint (max-xxl){
+        display: none;
+    }
 
     img {
         width: 100%;

@@ -794,11 +794,24 @@
     position: relative;
     margin-top: 72px;
 
+    @include breakpoint (max-xl){
+        margin-top: 0;
+        padding: 100px 0;
+    }
+
+    @include breakpoint (max-lg){
+        padding: 80px 0;
+    }
+
     .top-line-1 {
         position: absolute;
         left: 0;
         right: 0;
         top: -72px;
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
 
         img {
             width: 100%;
@@ -811,6 +824,10 @@
         right: 0;
         bottom: -72px;
 
+        @include breakpoint (max-xl){
+            display: none;
+        }
+
         img {
             width: 100%;
         }
@@ -820,18 +837,30 @@
         position: absolute;
         left: 3%;
         top: 20%;
+
+        @include breakpoint (max-xxl){
+            opacity: .3;
+        }
     }
 
     .star-shape2 {
         position: absolute;
         right: 40px;
         bottom: 25%;
+
+        @include breakpoint (max-xxl){
+            opacity: .3;
+        }
     }
 
     .cat-shape {
         position: absolute;
         left: 70px;
         bottom: 15%;
+
+        @include breakpoint (max-xxl){
+            opacity: .3;
+        }
     }
 }
 
@@ -920,6 +949,14 @@
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 14px;
+
+            @include breakpoint (max-xxl){
+                font-size: 17px;
+            }
+
+             @include breakpoint (max-md){
+                font-size: 20px;
+            }
             
             a {
                 background-position: 0 95%;
@@ -1009,12 +1046,21 @@
     border-top: 1px solid rgba(56, 84, 105, 0.2);
     padding-top: 40px;
     margin-top: 40px;
+    
+    @include breakpoint (max-md){
+        margin-top: 25px;
+        padding-top: 25px;
+    }
 
     .title {
         font-size: 20px;
         font-weight: 700;
         text-transform: capitalize;
         text-align: center;
+        
+        @include breakpoint (max-md){
+            font-size: 17px;
+        }
     }
 
     .program-button {
@@ -1022,6 +1068,12 @@
         gap: 30px;
         margin-top: 35px;
         justify-content: center;
+
+        @include breakpoint (max-md){
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 25px;
+        }
 
         .author-icon {
             @include flex;
@@ -1044,6 +1096,10 @@
                     font-weight: 700;
                     font-size: 24px;
 
+                    @include breakpoint (max-md){
+                        font-size: 19px;
+                    }
+
                     a {
                         color: $text-color;
 
@@ -1065,145 +1121,30 @@
     }
 }
 
-.choose-us-wrapper-2 {
-   
-    .choose-us-thumb {
-        position: relative;
-        z-index: 9;
-
-        .shape1 {
-            position: absolute;
-            top: 6%;
-            left: 16%;
-            z-index: 11;
-        }
-
-        &::before {
-            @include before;
-            background-color: $theme-color;
-            z-index: -1;
-            max-width: 623px;
-            mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 624 585"><path fill-rule="evenodd" clip-rule="evenodd" d="M456.618 101.994C486.213 5.80322 299.386 -66.341 295.685 96.4463C186.545 13.2033 66.311 105.693 162.499 224.082C-24.33 198.184 -37.2802 401.666 58.909 471.957C20.0638 518.199 86.6554 564.444 123.654 514.501C232.792 625.49 523.21 599.592 525.061 475.655C621.252 523.755 650.851 383.166 562.055 325.821C685.994 285.124 591.651 177.84 547.261 175.986C630.499 116.793 491.765 52.0478 456.618 101.994Z" /></svg>');
-            mask-repeat: no-repeat;
-            mask-position: center center;
-            mask-size: cover;
-            z-index: 9;
-            left: 30px;
-        }
-
-        .thumb {
-            max-width: 623px;
-            position: relative;
-            mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 624 585"><path fill-rule="evenodd" clip-rule="evenodd" d="M456.618 101.994C486.213 5.80322 299.386 -66.341 295.685 96.4463C186.545 13.2033 66.311 105.693 162.499 224.082C-24.33 198.184 -37.2802 401.666 58.909 471.957C20.0638 518.199 86.6554 564.444 123.654 514.501C232.792 625.49 523.21 599.592 525.061 475.655C621.252 523.755 650.851 383.166 562.055 325.821C685.994 285.124 591.651 177.84 547.261 175.986C630.499 116.793 491.765 52.0478 456.618 101.994Z" /></svg>');
-            mask-repeat: no-repeat;
-            mask-position: center center;
-            mask-size: cover;
-            z-index: 9;
-
-            img {
-                @include imgw;
-            }
-        }
-    }
-
-
-    .choose-us-content {
-        .choose-text {
-            margin-top: 30px;
-        }
-
-        ul {
-            margin-top: 50px;
-            @include flex;
-            justify-content: space-between;
-            gap: 20px;
-
-            li {    
-                display: flex;
-                align-items: center;
-                gap: 20px;
-                background-color: $white;
-                padding: 20px;
-                border-radius: 35px;
-
-                .icon {
-                    width: 56px;
-                    height: 56px;
-                    line-height: 56px;
-                    text-align: center;
-                    border-radius: 50%;
-                    background-color: #E1F6FE;
-                }
-                .title {
-                    .icon-title {
-                        font-size: 18px;
-                        text-transform: capitalize;
-                    }
-                }
-            }
-        }
-
-        .skill-feature {
-            max-width: 690px;
-            margin-top: 30px;
-            margin-bottom: 50px;
-
-            &:not(:last-child){
-                margin-bottom: 30px;
-            }
-
-            .box-title {
-                font-size: 18px;
-                font-weight: 700;
-                font-family: $heading-font;
-                color: $header-color;
-                text-transform: capitalize;
-            }
-
-            .progress-value {
-                margin-bottom: 10px;
-                //margin-top: -0.5em;
-                color: $header-color;
-                text-transform: capitalize;
-            }
-            .progress {
-                position: relative;
-                height: 8px;
-                background-color: #FEF4DE;
-                border-radius: 0;
-                overflow: visible;
-                margin-top: 15px;
-                border-radius: 4px;
-            }
-        
-            .progress-bar {
-                background-color: $theme-color;
-                height: 8px;
-                margin: 0;
-                border-radius: inherit;
-                overflow: visible;
-                position: relative;
-                margin-top: 0;
-                border-radius: 4px;
-            }
-            .progress-value {
-                position: absolute;
-                top: -38px;
-                right: -8px;
-                font-size: 16px;
-                font-weight: 700;
-                color: $header-color;
-                font-family: $heading-font;
-                font-size: 18px;
-            }
-        }
-    }
-}
 
 .footer-kids-section {
     margin: 0 60px;
     background-size: auto !important;
     position: relative;
+
+    @include breakpoint (max-xxxl){
+        margin: 0 40px;
+    }
+
+    @include breakpoint (max-xxl){
+        margin: 0 30px;
+        background-image: none !important;
+        background-color: #FEF4DE;
+        border-radius: 16px;
+    }
+
+    @include breakpoint (max-xl){
+        margin: 0 20px;
+    }
+
+    @include breakpoint (max-xxs){
+        margin: 0 16px;
+    }
 
     .eating-yummy {
         position: absolute;
@@ -1214,6 +1155,11 @@
     .section-title-area {
         justify-content: start;
         gap: 300px;
+
+        @include breakpoint (max-xxl){
+            gap: 30px;
+            justify-content: space-between;
+        }
 
         .client-sub {
             @include flex;
@@ -1235,12 +1181,24 @@
         position: absolute;
         left: 10px;
         bottom: 40px;
+
+         @include breakpoint (max-xxl){
+            opacity: .3;
+        }
     }
 
     .food-shape2 {
         position: absolute;
         right: 200px;
         top: 53px;
+
+        @include breakpoint (max-xxxl){
+            right: 70px;
+        }
+
+         @include breakpoint (max-xxl){
+            opacity: .3;
+        }
     }
 }
 
@@ -1248,11 +1206,27 @@
     margin-top: 30px;
     position: relative;
 
+    @include breakpoint (max-xxl){
+        max-width: 330px;
+        margin: 30px auto 0;
+    }
+
+     @include breakpoint (max-xl){
+        max-width: initial;
+        background-color: $white;
+        border-radius: 16px;
+        padding: 30px;
+    }
+
     .bg-thumb {
         position: relative;
 
         img {
             @include imgw;
+
+            @include breakpoint (max-xl){
+                display: none;
+            }
         }
 
         .food-img {
@@ -1260,9 +1234,18 @@
             bottom: 20px;
             right: 80px;
 
+            @include breakpoint (max-xl){
+                bottom: -40px;
+                right: -15px;
+            }
+
             img {
                 width: initial;
                 height: initial;
+
+                 @include breakpoint (max-xl){
+                    display: inline;
+                }
             }
         }
     }
@@ -1275,9 +1258,20 @@
         right: 0;
         padding-left: 65px;
 
+         @include breakpoint (max-xl){
+            position: static;
+            padding-left: 0;
+            transform: initial;
+         }
+
         .icon {
             margin-bottom: 5px;
             margin-left: 35px;
+
+            @include breakpoint (max-xl){
+               margin-left: 0;
+               margin-bottom: 15px;
+            }
         }
 
         .title {
@@ -1304,12 +1298,23 @@
 
 .extra-activities-slider {
     margin-left: -16%;
+
+    @include breakpoint (max-md){
+        margin-left: 0;
+    }
 }
 
 .extra-activities-box-2 {
     margin-top: 30px;
     @include flex;
     gap: 30px;
+    position: relative;
+    z-index: 9;
+
+    @include breakpoint (max-md){
+        display: block;
+        text-align: center;
+    }
 
     .thumb {
         border-radius: 60px;
@@ -1346,6 +1351,10 @@
         border: 1px dashed $theme-color;
         border-radius: 40px;
         max-width: 380px;
+
+        @include breakpoint (max-md){
+            max-width: initial;
+        }
 
         .title {
             text-transform: capitalize;
@@ -1445,6 +1454,10 @@
 
 .extra-activities-section-2 {
     margin-top: -15px;
+
+    @include breakpoint (max-xxl){
+        margin-top: 0;
+    }
 }
 
 .schedule-section {

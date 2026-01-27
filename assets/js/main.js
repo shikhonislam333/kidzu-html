@@ -291,7 +291,7 @@
                 slidesPerView: 1.5,
             },
             575: {
-                slidesPerView: 1,
+                slidesPerView: 1.4,
             },
             0: {
                 slidesPerView: 1,
@@ -438,9 +438,11 @@
             clickable: true,
         },
         breakpoints: {
-            
-            1199: {
+            1399: {
                 slidesPerView: 4,
+            },
+            1199: {
+                slidesPerView: 3,
             },
             991: {
                 slidesPerView: 3,
@@ -477,12 +479,14 @@
             clickable: true,
         },
         breakpoints: {
-            
-            1199: {
+            1399: {
                 slidesPerView: 4,
             },
-            991: {
+            1199: {
                 slidesPerView: 3,
+            },
+            991: {
+                slidesPerView: 2.7,
             },
             767: {
                 slidesPerView: 2,

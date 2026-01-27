@@ -531,12 +531,173 @@
         position: absolute;
         left: 50px;
         top: 25%;
+
+        @include breakpoint (max-xxl){
+            opacity: .2;
+        }
     }
 
     .girl-shape {
         position: absolute;
         right: 45px;
         bottom: 10%;
+
+        @include breakpoint (max-xxl){
+            opacity: .2;
+        }
+    }
+}
+
+.choose-us-wrapper-2 {
+   
+    .choose-us-thumb {
+        position: relative;
+        z-index: 9;
+
+        .shape1 {
+            position: absolute;
+            top: 6%;
+            left: 16%;
+            z-index: 11;
+        }
+
+        &::before {
+            @include before;
+            background-color: $theme-color;
+            z-index: -1;
+            max-width: 623px;
+            mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 624 585"><path fill-rule="evenodd" clip-rule="evenodd" d="M456.618 101.994C486.213 5.80322 299.386 -66.341 295.685 96.4463C186.545 13.2033 66.311 105.693 162.499 224.082C-24.33 198.184 -37.2802 401.666 58.909 471.957C20.0638 518.199 86.6554 564.444 123.654 514.501C232.792 625.49 523.21 599.592 525.061 475.655C621.252 523.755 650.851 383.166 562.055 325.821C685.994 285.124 591.651 177.84 547.261 175.986C630.499 116.793 491.765 52.0478 456.618 101.994Z" /></svg>');
+            mask-repeat: no-repeat;
+            mask-position: center center;
+            mask-size: cover;
+            z-index: 9;
+            left: 30px;
+
+            @include breakpoint (max-xxl){
+
+                display: none;
+            }
+        }
+
+        .thumb {
+            max-width: 623px;
+            position: relative;
+            mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 624 585"><path fill-rule="evenodd" clip-rule="evenodd" d="M456.618 101.994C486.213 5.80322 299.386 -66.341 295.685 96.4463C186.545 13.2033 66.311 105.693 162.499 224.082C-24.33 198.184 -37.2802 401.666 58.909 471.957C20.0638 518.199 86.6554 564.444 123.654 514.501C232.792 625.49 523.21 599.592 525.061 475.655C621.252 523.755 650.851 383.166 562.055 325.821C685.994 285.124 591.651 177.84 547.261 175.986C630.499 116.793 491.765 52.0478 456.618 101.994Z" /></svg>');
+            mask-repeat: no-repeat;
+            mask-position: center center;
+            mask-size: cover;
+            z-index: 9;
+
+            img {
+                @include imgw;
+            }
+        }
+    }
+
+
+    .choose-us-content {
+        .choose-text {
+            margin-top: 30px;
+        }
+
+        ul {
+            margin-top: 50px;
+            @include flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            @include breakpoint (max-xxl){
+                flex-wrap: wrap;
+                margin-top: 30px;
+            }
+
+            li {    
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                background-color: $white;
+                padding: 20px;
+                border-radius: 35px;
+
+                .icon {
+                    width: 56px;
+                    height: 56px;
+                    line-height: 56px;
+                    text-align: center;
+                    border-radius: 50%;
+                    background-color: #E1F6FE;
+                }
+                .title {
+                    .icon-title {
+                        font-size: 18px;
+                        text-transform: capitalize;
+
+                        @include breakpoint (max-xxl){
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .skill-feature {
+            max-width: 690px;
+            margin-top: 30px;
+            margin-bottom: 50px;
+
+            @include breakpoint (max-xxl){
+                margin-bottom: 30px;
+            }
+
+            &:not(:last-child){
+                margin-bottom: 30px;
+            }
+
+            .box-title {
+                font-size: 18px;
+                font-weight: 700;
+                font-family: $heading-font;
+                color: $header-color;
+                text-transform: capitalize;
+            }
+
+            .progress-value {
+                margin-bottom: 10px;
+                //margin-top: -0.5em;
+                color: $header-color;
+                text-transform: capitalize;
+            }
+            .progress {
+                position: relative;
+                height: 8px;
+                background-color: #FEF4DE;
+                border-radius: 0;
+                overflow: visible;
+                margin-top: 15px;
+                border-radius: 4px;
+            }
+        
+            .progress-bar {
+                background-color: $theme-color;
+                height: 8px;
+                margin: 0;
+                border-radius: inherit;
+                overflow: visible;
+                position: relative;
+                margin-top: 0;
+                border-radius: 4px;
+            }
+            .progress-value {
+                position: absolute;
+                top: -38px;
+                right: -8px;
+                font-size: 16px;
+                font-weight: 700;
+                color: $header-color;
+                font-family: $heading-font;
+                font-size: 18px;
+            }
+        }
     }
 }
 
@@ -545,10 +706,38 @@
     position: relative;
     margin-top: 152px;
 
+    @include breakpoint (max-xl4){
+        margin-top: 100px;
+    }
+
+    @include breakpoint (max-xxl){
+        margin-top: 0;
+        padding-top: 120px !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 120px;
+        overflow: hidden;
+    }
+
+    @include breakpoint (max-xl){
+        margin-top: 0;
+        padding-top: 100px !important;
+        margin-bottom: 100px;
+    }
+
+     @include breakpoint (max-lg){
+        margin-top: 0;
+        padding-top: 80px !important;
+        margin-bottom: 80px;
+    }
+
     .shape {
         position: absolute;
         top: 0;
         left: 120px;
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
     }
 
     .love-shape {
@@ -563,6 +752,14 @@
         left: 0;
         right: 0;
 
+        @include breakpoint (max-xl4){
+            top: -100px;
+        }
+
+         @include breakpoint (max-xxl){
+            display: none;
+        }
+
         img {
             width: 100%;
         }
@@ -575,6 +772,10 @@
         right: 0;
         z-index: 1;
 
+          @include breakpoint (max-xxl){
+            display: none;
+        }
+
         img {
             width: 100%;
         }
@@ -584,12 +785,18 @@
         position: absolute;
         right: 5%;
         top: -18%;
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
     }
 }
 
 .values-wrapper-2 {
     .values-list {
         margin-top: 30px;
+        position: relative;
+        z-index: 9;
 
         li {
             display: flex;
@@ -600,8 +807,17 @@
             background-color: $white;
             @include transition;
 
+            @include breakpoint (max-xxl){
+                gap: 15px;
+                padding: 15px;
+            }
+
             &:not(:last-child){
                 margin-bottom: 30px;
+
+                @include breakpoint (max-xxl){
+                    margin-bottom: 18px;
+                }
             }
 
             .icon {
@@ -618,6 +834,9 @@
                     font-size: 18px;
                     font-weight: 700;
                     text-transform: capitalize;
+                    @include breakpoint (max-xxl){
+                       font-size: 14px;
+                    }
                 }
             }
 
@@ -639,11 +858,29 @@
         margin-top: 30px;
         position: relative;
 
+        @include breakpoint (max-xxxl){
+            margin-bottom: -45px;
+        }
+
+        @include breakpoint (max-xxl){
+            margin-bottom: 0;
+        }
+
+        @include breakpoint (max-md){
+            img {
+                @include imgw;
+            }
+        }
+
         .line-1 {
             position: absolute;
             top: 45%;
             left: 20px;
             transform: translateY(-50%);
+
+             @include breakpoint (max-xxl){
+                display: none;
+            }
         }
 
         .line-2 {
@@ -651,6 +888,10 @@
             top: 45%;
             right: 20px;
             transform: translateY(-50%);
+
+             @include breakpoint (max-xxl){
+                display: none;
+            }
         }
     }
 }
@@ -658,6 +899,9 @@
 .special-offer-wrapper {
     position: relative;
     .border-shape {
+        @include breakpoint (max-lg){
+            display: none
+        }
         img {
             @include imgw;
         }
@@ -672,6 +916,13 @@
         margin-left: 20px;
         width: calc(100% - 40px);
 
+         @include breakpoint (max-lg){
+            position: static;
+            transform: initial;
+            margin-left: 0;
+            width: initial;
+        }
+
         .thumb {
             position: relative;
             max-width: 1410px;
@@ -679,6 +930,17 @@
             mask-repeat: no-repeat;
             mask-position: center center;
             mask-size: cover;
+
+             @include breakpoint (max-lg){
+                mask: none;
+                height: 500px;
+                 border-radius: 16px;
+
+                img {
+                    object-fit: cover;
+                    border-radius: 16px;
+                }
+            }
 
             &::before {
                 @include before;
@@ -699,10 +961,51 @@
             right: 0;
             transform: translateY(-50%);
             z-index: 99;
+
+            @include breakpoint (max-md){
+               margin: 0 15px;
+            }
+
+            .theme-btn {
+                margin-top: 35px;
+
+                .theme-text {
+                    color: $white;
+                }
+
+                &:hover {
+                    .theme-text {
+                        img {
+                             filter: brightness(0) invert(1);
+                        }
+                    }
+                }
+            }
         }
     }
 }
 
 
+.special-offer-section {
+    position: relative;
 
+    .tree-shape {
+        position: absolute;
+        left: 53px;
+        top: 0;
 
+        @include breakpoint (max-xxl){
+            opacity: .3;
+        }
+    }
+
+    .doll-shape {
+        position: absolute;
+        bottom: -12%;
+        right: 12%;
+
+        @include breakpoint (max-xxl){
+            opacity: .3;
+        }
+    }
+}

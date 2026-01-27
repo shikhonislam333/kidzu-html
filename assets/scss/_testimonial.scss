@@ -54,12 +54,28 @@
     margin-top: 50px;
     position: relative;
 
+    @include breakpoint (max-xl){
+        background-color: $bg-color;
+        padding: 30px;
+        border-radius: 16px;
+    }
+
+    .bg-thumb {
+        @include breakpoint (max-xl){
+            display: none;
+        }
+    }
+
     .content {
         text-align: center;
         position: absolute;
         top: -25px;
         left: 0;
         right: 0;
+
+         @include breakpoint (max-xl){
+            position: static;
+        }
 
         .client-image {
             margin-bottom: 10px;
@@ -94,16 +110,41 @@
 
 .testimonial-section-2 {
     position: relative;
+    margin-top: -30px;
+
+    @include breakpoint (max-xl4){
+        margin-top: -60px;
+    }
+
+     @include breakpoint (max-xxxl){
+        margin-top: -40px;
+    }
+
+     @include breakpoint (max-xxl){
+        margin-top: 0px;
+    }
+
+    @include breakpoint (max-xl){
+        margin-top: 0;
+    }
 
     .girl-shape {
         position: absolute;
         top: 25%;
         left: 60px;
+
+        @include breakpoint (max-xxl){
+            opacity: .3;
+        }
     }
 
     .zirap-shape {
         position: absolute;
         bottom: 0;
         right: 0;
+
+        @include breakpoint (max-xxl){
+            opacity: .3;
+        }
     }
 }
