@@ -228,6 +228,30 @@
 		},
 	});
 
+     /* ================================
+       Banner Active Js Start
+    ================================ */
+
+       if($('.banner-active').length > 0) {
+            const bannerActive = new Swiper(".banner-active", {
+                speed:1500,
+                loop: true,
+                slidesPerView: 1,
+                effect:'fade',
+                autoplay: {
+                    delay: 3000,         
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: false,  
+                },
+                navigation: {
+                    nextEl: ".array-prev",
+                    prevEl: ".array-next",
+                },
+              
+		
+            });
+        }
+
     /* ================================
       Program Slider Js Start
     ================================ */
@@ -623,105 +647,105 @@
        Text Title Animation Js Start
     ================================ */
 
-   if (typeof gsap !== "undefined") {
-        gsap.registerPlugin(ScrollTrigger, SplitText);
+//    if (typeof gsap !== "undefined") {
+//         gsap.registerPlugin(ScrollTrigger, SplitText);
 
-        let mm = gsap.matchMedia();
+//         let mm = gsap.matchMedia();
 
-        mm.add("(min-width: 1200px)", () => {
+//         mm.add("(min-width: 1200px)", () => {
 
-            let splits = [];
+//             let splits = [];
 
-            // ===== tz-sub-tilte =====
-            $('.tz-sub-tilte').each(function (index, el) {
+//             // ===== tz-sub-tilte =====
+//             $('.tz-sub-tilte').each(function (index, el) {
 
-            let split = new SplitText(el, {
-                type: "lines,words,chars",
-                linesClass: "split-line"
-            });
+//             let split = new SplitText(el, {
+//                 type: "lines,words,chars",
+//                 linesClass: "split-line"
+//             });
 
-            splits.push(split);
+//             splits.push(split);
 
-            gsap.set(split.chars, {
-                opacity: 0,
-                x: 7
-            });
+//             gsap.set(split.chars, {
+//                 opacity: 0,
+//                 x: 7
+//             });
 
-            gsap.to(split.chars, {
-                scrollTrigger: {
-                trigger: el,
-                start: "top 90%",
-                end: "top 60%",
-                scrub: 1
-                },
-                x: 0,
-                opacity: 1,
-                duration: 0.7,
-                stagger: 0.2
-            });
-            });
+//             gsap.to(split.chars, {
+//                 scrollTrigger: {
+//                 trigger: el,
+//                 start: "top 90%",
+//                 end: "top 60%",
+//                 scrub: 1
+//                 },
+//                 x: 0,
+//                 opacity: 1,
+//                 duration: 0.7,
+//                 stagger: 0.2
+//             });
+//             });
 
-            // ===== tz-itm-title =====
-            $('.tz-itm-title').each(function (index, el) {
+//             // ===== tz-itm-title =====
+//             $('.tz-itm-title').each(function (index, el) {
 
-            let split = new SplitText(el, {
-                type: "lines,words,chars",
-                linesClass: "split-line"
-            });
+//             let split = new SplitText(el, {
+//                 type: "lines,words,chars",
+//                 linesClass: "split-line"
+//             });
 
-            splits.push(split);
+//             splits.push(split);
 
-            gsap.set(split.chars, {
-                opacity: 0.3,
-                x: -7
-            });
+//             gsap.set(split.chars, {
+//                 opacity: 0.3,
+//                 x: -7
+//             });
 
-            gsap.to(split.chars, {
-                scrollTrigger: {
-                trigger: el,
-                start: "top 92%",
-                end: "top 60%",
-                scrub: 1
-                },
-                x: 0,
-                opacity: 1,
-                duration: 0.7,
-                stagger: 0.2
-            });
-            });
+//             gsap.to(split.chars, {
+//                 scrollTrigger: {
+//                 trigger: el,
+//                 start: "top 92%",
+//                 end: "top 60%",
+//                 scrub: 1
+//                 },
+//                 x: 0,
+//                 opacity: 1,
+//                 duration: 0.7,
+//                 stagger: 0.2
+//             });
+//             });
 
-            // ðŸ”¥ MOST IMPORTANT PART
-            ScrollTrigger.refresh();
+//             // ðŸ”¥ MOST IMPORTANT PART
+//             ScrollTrigger.refresh();
 
-            // ðŸ”¥ cleanup on breakpoint change
-            return () => {
-            splits.forEach(split => split.revert());
-            ScrollTrigger.getAll().forEach(st => st.kill());
-            };
+//             // ðŸ”¥ cleanup on breakpoint change
+//             return () => {
+//             splits.forEach(split => split.revert());
+//             ScrollTrigger.getAll().forEach(st => st.kill());
+//             };
 
-        });
-    }
+//         });
+//     }
 
-    if ($(".text-anim").length) {
-		let staggerAmount = 0.03,
-			translateXValue = 20,
-			delayValue = 0.1,
-			easeType = "power2.out",
-			animatedTextElements = document.querySelectorAll(".text-anim");
+//     if ($(".text-anim").length) {
+// 		let staggerAmount = 0.03,
+// 			translateXValue = 20,
+// 			delayValue = 0.1,
+// 			easeType = "power2.out",
+// 			animatedTextElements = document.querySelectorAll(".text-anim");
 
-		animatedTextElements.forEach(element => {
-			let animationSplitText = new SplitText(element, { type: "chars, words" });
-			gsap.from(animationSplitText.chars, {
-				duration: 1,
-				delay: delayValue,
-				x: translateXValue,
-				autoAlpha: 0,
-				stagger: staggerAmount,
-				ease: easeType,
-				scrollTrigger: { trigger: element, start: "top 85%" },
-			});
-		});
-	}
+// 		animatedTextElements.forEach(element => {
+// 			let animationSplitText = new SplitText(element, { type: "chars, words" });
+// 			gsap.from(animationSplitText.chars, {
+// 				duration: 1,
+// 				delay: delayValue,
+// 				x: translateXValue,
+// 				autoAlpha: 0,
+// 				stagger: staggerAmount,
+// 				ease: easeType,
+// 				scrollTrigger: { trigger: element, start: "top 85%" },
+// 			});
+// 		});
+// 	}
 
      /* ================================
        Sticky Js Start

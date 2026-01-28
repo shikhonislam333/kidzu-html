@@ -132,6 +132,7 @@
                 top: 0;
                 right: 0;
                 line-height: 1;
+                @include transition; 
 
                 @include breakpoint (max-sm){
                     position: static;

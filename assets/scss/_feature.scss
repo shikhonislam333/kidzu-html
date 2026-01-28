@@ -274,6 +274,113 @@
             }
         }
     }
+
+    &.style-about-3 {
+        .choose-us-content {
+            max-width: initial;
+
+            .section-title {
+                h2 {
+                    font-size: 49px;
+
+                    @include breakpoint(max-xxl){
+                        font-size: 44px;
+                    }
+
+                    @include breakpoint(max-xl){
+                        font-size: 40px;
+                    }
+
+                    @include breakpoint(max-lg){
+                        font-size: 36px;
+                    }
+
+                    @include breakpoint(max-md){
+                        font-size: 40px;
+                    }
+
+                    @include breakpoint(max-sm){
+                        font-size: 36px;
+                    }
+                }
+            }
+
+            .choose-items {
+                padding-top: 0;
+                border-top: none;
+            }
+
+            .about-button {
+            @include flex;
+            gap: 30px;
+            margin-top: 40px;
+
+            @include breakpoint (max-xl){
+               flex-wrap: wrap;
+               gap: 20px;
+            }
+
+            @include breakpoint (max-md){
+                margin-top: 25px;
+            }
+
+            .author-icon {
+                @include flex;
+                gap: 15px;
+
+                .icon {
+                    width: 56px;
+                    line-height: 59px;
+                    height: 59px;
+                    text-align: center;
+                    background-color: $theme-color;
+                    text-align: center;
+                    color: $white;
+                    border-radius: 15px;
+                    position: relative;
+                }
+
+                .content {
+                    h4 {
+                        font-weight: 700;
+                        font-size: 24px;
+
+                        a {
+                            color: $text-color;
+
+                            &:hover {
+                                color: $theme-color;
+                            }
+                        }
+                    }
+
+                    span {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: $header-color;
+                        font-family: $body-font;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+        }
+
+        .choose-us-image-2 {
+            transition: all 500ms ease;
+             mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 657 534"><path fill-rule="evenodd" clip-rule="evenodd" d="M59.7831 228.775C39.3307 237.073 23.6339 254.753 14.3189 274.762C5.00386 294.771 1.53393 317.03 0.370222 339.07C-0.747578 360.252 0.294271 382.108 8.7175 401.575C17.1407 421.042 34.1197 437.823 55.0506 441.261C56.5816 485.85 94.502 525.086 138.509 532.427C182.517 539.769 228.861 517.482 254.547 481.003C264.48 498.771 283.306 510.367 303.1 515.119C322.893 519.869 343.673 518.448 363.751 515.1C386.659 511.28 409.596 504.791 428.813 491.746C448.029 478.703 463.198 458.318 465.767 435.238C503.617 452.086 547.956 438.056 584.598 418.722C605.469 407.71 625.987 394.501 639.61 375.232C658.043 349.164 661.329 313.34 648.698 284.019C636.065 254.698 608.204 232.648 576.922 226.271C585.416 210.52 576.062 191.033 564.465 177.401C527.901 134.417 466.035 114.765 411.369 128.767C422.685 109.995 421.35 85.3878 411.654 65.7318C401.957 46.0759 384.913 30.8787 366.29 19.3228C350.512 9.53104 332.973 1.90248 314.47 0.320255C274.507 -3.09672 238.124 21.4384 205.558 44.8521C179.201 20.7744 137.392 21.4013 104.813 35.9998C69.0257 52.0375 39.6327 84.8228 33.7047 123.589C27.7766 162.355 49.0501 205.324 85.8157 218.973C76.4583 221.917 67.7261 226.827 60.3518 233.298" /></svg>');
+            mask-repeat: no-repeat;
+            max-width: 656px;
+            mask-position: center center;
+            mask-size: cover;
+            position: relative;
+            z-index: 99;
+
+            img {
+                @include imgw;
+            }
+        }
+    }
 }
 
 .choose-us-section {

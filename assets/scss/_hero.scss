@@ -560,3 +560,213 @@
         }
     }
 }
+
+.hero-section-3 {
+    position: relative;
+
+    .line-shape {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .hero-line {
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        right: 0;
+        z-index: 22;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .social-icon {
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        transform: translateY(-50%);
+        z-index: 9;
+        gap: 12px;
+
+        a {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, .25);
+            color: $white;
+            border-radius: 50%;
+            font-size: 14px;
+
+            &:hover {
+                background-color: $white;
+                color: $theme-color;
+            }
+        }
+    }
+
+    .swiper-slide.swiper-slide-active .hero-bg {
+        -webkit-transform: scale(1.35);
+        transform: scale(1.35);
+        border-radius: 20px;
+    }
+    
+    .swiper-slide.swiper-slide-active .hero-content {
+        opacity: 1;
+        transform: translatey(0px);
+        transition: all 2500ms ease;
+    }
+    .swiper-slide.swiper-slide-active .hero-button {
+        opacity: 1;
+        transform: translatey(0px);
+        transition: all 2500ms ease;
+    }
+}
+
+.hero-3 {
+    padding: 200px 0 250px;
+    position: relative;
+    z-index: 999;
+
+    @include breakpoint(max-xxl){
+        padding: 270px 0 190px;
+    }
+
+     @include breakpoint(max-xl){
+        padding: 250px 0 170px;
+    }
+
+    @include breakpoint(max-lg){
+        padding: 210px 0 140px;
+    }
+
+     @include breakpoint(max-md){
+        padding: 160px 0 110px;
+    }
+
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: opacity 1500ms ease-in, -webkit-transform 7000ms ease;
+        transition: opacity 1500ms ease-in, -webkit-transform 7000ms ease;
+        transition: transform 9000ms ease, opacity 1500ms ease-in;
+        transition: transform 9000ms ease, opacity 1500ms ease-in, -webkit-transform 9000ms ease;
+        z-index: 9;
+
+        &::before {
+            @include before;
+            background: linear-gradient(90deg, rgba(10, 77, 109, 0.8) 0%, rgba(10, 77, 109, 0.7) 50.48%, rgba(10, 77, 109, 0) 66.83%, #0A4D6D 100%);
+        }
+    }
+
+
+   .hero-content {
+        position: relative;
+        opacity: 0;
+        z-index: 99;
+        position: relative;
+        transform: translateY(-150px);
+
+        .sub-text {
+            text-transform: capitalize;
+            color: $theme-color;
+            position: relative;
+            margin-bottom: 5px;
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: $sub-font;
+
+        }
+
+
+        h1 {
+           color: $white;
+           font-size: 70px;
+           font-weight: 700;
+           line-height: 114%;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            color: $white;
+            max-width: 806px;
+            margin-top: 20px;
+        }
+    }
+
+    .hero-button {
+        @include flex;
+        gap: 20px;
+        margin-top: 35px;
+        transform: translateY(150px);
+        opacity: 0;
+        position: relative;
+        z-index: 9;
+
+        @include breakpoint (max-xxl) {
+            flex-wrap: wrap;
+        }
+
+        .author-icon {
+            @include flex;
+            gap: 15px;
+
+            .icon {
+                width: 56px;
+                line-height: 59px;
+                height: 59px;
+                text-align: center;
+                background-color: $white;
+                text-align: center;
+                color: $white;
+                border-radius: 15px;
+                position: relative;
+            }
+
+            .content {
+                h4 {
+                    font-weight: 700;
+                    font-size: 24px;
+
+                    a {
+                        color: $white;
+
+                        &:hover {
+                            color: $theme-color;
+                        }
+                    }
+                }
+
+                span {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: $white;
+                    font-family: $body-font;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        .theme-btn {
+            .theme-bg {
+                 svg {
+                  max-width: 225px;
+                }
+            }
+        }
+    }
+}
