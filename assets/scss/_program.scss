@@ -519,6 +519,7 @@
         position: relative;
         z-index: 9;
         max-width: 358px;
+        margin-top: 30px;
 
         .program-box-items {
              .item-bg {
@@ -533,8 +534,13 @@
                 padding: 0 20px;
 
                 .post-box {
-                    background-color: $white;
-                    color: $theme-color;
+                    background-color: $theme-color;
+                    color: $white;
+                    @include transition;
+                }
+
+                p {
+                    font-size: 16px;
                 }
             }
         }
@@ -571,11 +577,17 @@
                     p {
                          color: $white;
                     }
+
+                    .post-box {
+                        background-color: $white;
+                        color: $theme-color;
+                    }
                 }
             }
         }
     }
 }
+
 
 .activities-section {
     margin: 0 60px;
@@ -1535,4 +1547,38 @@
 
 .program-section-3 {
     background-color: #C9DDE2;
+    position: relative;
+
+    .top-line {
+        position: absolute;
+        top: -55px;
+        left: 0;
+        right: 0;
+    }
+
+    .happy-mother {
+        position: absolute;
+        bottom: 0;
+        right: 60px;
+        z-index: 1;
+
+        .shape {
+            position: absolute;
+            top: -3%;
+            z-index: -1;
+            left: -40px;
+        }
+    }
+
+    .cat-shape {
+        position: absolute;
+        bottom: 50px;
+        right: 36px;
+    }
+
+    .star-shape {
+        position: absolute;
+        top: 10%;
+        right: 42%;
+    }
 }

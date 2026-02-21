@@ -235,6 +235,10 @@
             }
 
         }
+
+        .active-block {
+            border: 1px solid $theme-color;
+        }
     }
 
 
@@ -256,6 +260,20 @@
 
     .accordion-box .block:last-child {
         margin-bottom: 0;
+    }
+
+    &.faq-content-3 {
+        max-width: 620px;
+        margin-left: auto;
+
+        .faq-image-3 {
+            max-width: 400px;
+            margin-top: 30px;
+
+            img {
+                @include imgw;
+            }
+        }
     }
 }
 
