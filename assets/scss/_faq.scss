@@ -277,3 +277,18 @@
     }
 }
 
+.faq-section-3 {
+    position: relative;
+
+    .train-shape {
+        position: absolute;
+        right: 60px;
+        bottom: 150px;
+    }
+
+    .vec-shape {
+        position: absolute;
+        left: 40px;
+        top: 35%;
+    }
+}

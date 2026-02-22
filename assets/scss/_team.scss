@@ -601,3 +601,13 @@
 .team-slider-3 {
     margin-right: -35%;
 }
+
+.team-section-3 {
+    position: relative;
+
+    .shape1 {
+        position: absolute;
+        right: 10%;
+        top: 2%;
+    }
+}

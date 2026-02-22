@@ -569,6 +569,10 @@
         top: 0;
         right: 0;
         z-index: 1;
+
+         @include breakpoint (max-xxxl){
+            display: none;
+        }
     }
 
     .hero-line {
@@ -577,6 +581,10 @@
         left: 0;
         right: 0;
         z-index: 22;
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
 
         img {
             width: 100%;
@@ -590,6 +598,10 @@
         transform: translateY(-50%);
         z-index: 9;
         gap: 12px;
+
+        @include breakpoint (max-xl){
+            display: none !important;
+        }
 
         a {
             display: inline-block;
@@ -628,7 +640,7 @@
 }
 
 .hero-3 {
-    padding: 200px 0 250px;
+    padding: 200px 0 280px;
     position: relative;
     z-index: 999;
 
@@ -671,7 +683,6 @@
         }
     }
 
-
    .hero-content {
         position: relative;
         opacity: 0;
@@ -697,6 +708,26 @@
            font-size: 70px;
            font-weight: 700;
            line-height: 114%;
+
+            @include breakpoint (max-xl){
+                font-size: 62px;
+           }
+
+           @include breakpoint (max-lg){
+                font-size: 56px;
+           }
+
+            @include breakpoint (max-md){
+                font-size: 50px;
+           }
+
+           @include breakpoint (max-sm){
+                font-size: 40px;
+           }
+
+           @include breakpoint (max-xxs){
+                font-size: 34px;
+           }
         }
 
         p {
@@ -705,6 +736,10 @@
             color: $white;
             max-width: 806px;
             margin-top: 20px;
+
+            @include breakpoint (max-sm){
+                font-size: 15px;
+            }
         }
     }
 

@@ -1,0 +1,165 @@
+.book-contact-section-3 {
+    position: relative;
+    z-index: 9;
+
+    .shape-1 {
+        position: absolute;
+        top: 180px;
+        left: 24%;
+    }
+
+    .shape-2 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .shape-3 {
+        position: absolute;
+        top: 40%;
+        right: 40px;
+    }
+
+    &::before {
+        @include before;
+        background: rgba(10, 77, 109, 0.8);
+        z-index: -1;
+    }
+
+    
+   .content {
+
+    .text {
+        color: $white;
+        font-size: 18px;
+        max-width: 565px;
+        margin-top: 30px;
+    }
+
+        .info-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 30px;
+
+             @include breakpoint (max-md){
+                margin-top: 30px;
+            }
+
+            @include breakpoint (max-xxs){
+                margin-top: 18px;
+            }
+
+            .icon {
+                width: 56px;
+                height: 59px;
+                line-height: 59px;
+                background-color: $theme-color;
+                text-align: center;
+                border-radius: 16px;
+            }
+
+            .info-cont {
+                p {
+                    font-weight: 600;
+                    color: $white;
+                }
+
+                h3 {
+                    font-size: 30px;
+
+                    @include breakpoint (max-md){
+                        font-size: 23px;
+                    }
+
+                    @include breakpoint (max-sm){
+                        font-size: 20px;
+                    }
+
+                    a {
+                        color: $white;
+                        &:hover {
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+   }
+}
+
+.contact-form-items-3 {
+    position: relative;
+
+    .contact-bg {
+        img {
+            @include imgw;
+        }
+    }
+
+    .title {
+        font-size: 50px;
+        font-weight: 700;
+        color: $white;
+        text-transform: capitalize;
+        margin-bottom: 12px;
+    }
+
+    .form-box {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        right: 0;
+        max-width: 460px;
+        margin: 0  auto;
+
+        .form-clt {
+            .label-text {
+                display: inline-block;
+                color: $white;
+                font-size: 18px;
+                font-weight: 600;
+                text-transform: capitalize;
+                margin-bottom: 8px;
+            }
+
+             input,textarea {
+            display: inline-block;
+            border: 1px solid rgba(22, 51, 59, 0.1);
+            width: 100%;
+            padding: 0 22px;
+            line-height: 65px;
+            height: 65px;
+            border-radius: 15px;
+            color: $header-color;
+            font-weight: 400;
+            text-transform: capitalize;
+
+            &::placeholder {
+                color: $header-color;
+            }
+        }
+
+        .single-select  {
+             display: inline-block;
+            border: 1px solid rgba(22, 51, 59, 0.1);
+            width: 100%;
+            padding: 0 22px;
+            line-height: 1;
+            border-radius: 15px;
+            color: $text-color;
+            font-weight: 400;
+            line-height: 65px;
+            height: 65px;
+
+            .list {
+                width: 100%;
+            }
+        }
+
+        textarea {
+            height: 126px;
+        }
+        }
+    }
+}

@@ -300,9 +300,9 @@
             delay: 2000,
             disableOnInteraction: false,
         },
-        pagination: {
-            el: ".dot2",
-            clickable: true,
+        navigation: {
+            nextEl: ".array-next",
+            prevEl: ".array-prev",
         },
         breakpoints: {
             1399: {
@@ -438,7 +438,7 @@
     });
    }
 
-     if ($('.team-slider-3').length > 0) {
+    if ($('.team-slider-3').length > 0) {
     const teamSlider3 = new Swiper(".team-slider-3", {
         spaceBetween: 30,
         speed: 1300,
@@ -470,7 +470,7 @@
             },
         },
     });
-   }
+    }
 
     /* ================================
       Testimonial Slider Js Start
@@ -534,6 +534,42 @@
         breakpoints: {
             1399: {
                 slidesPerView: 4,
+            },
+            1199: {
+                slidesPerView: 3,
+            },
+            991: {
+                slidesPerView: 3,
+            },
+            767: {
+                slidesPerView: 2,
+            },
+            575: {
+                slidesPerView: 1.4,
+            },
+            0: {
+                slidesPerView: 1,
+            },
+        },
+    });
+   }
+
+   if ($('.testimonial-slider-3').length > 0) {
+    const testimonialSlider3 = new Swiper(".testimonial-slider-3", {
+        spaceBetween: 30,
+        speed: 1300,
+        loop: true,
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".array-next",
+            prevEl: ".array-prev",
+        },
+        breakpoints: {
+            1399: {
+                slidesPerView: 3,
             },
             1199: {
                 slidesPerView: 3,

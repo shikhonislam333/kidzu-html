@@ -1582,3 +1582,19 @@
         right: 42%;
     }
 }
+
+.program-section-3 {
+     .array-button {
+        @include flex;
+        gap: 10px;
+
+        .array-prev,.array-next {
+            display: inline-block;
+            width: 50px;
+            height: 42px;
+            line-height: 40px;
+            border-radius: 50%;
+            background-color: $header-color;
+        }
+    }
+}

@@ -148,3 +148,114 @@
         }
     }
 }
+
+.testimonial-wrapper-3 {
+    position: relative;
+     padding: 60px 60px;
+     margin-bottom: 50px;
+
+    .array-button {
+    @include flex;
+    gap: 10px;
+
+    .array-prev,.array-next {
+        display: inline-block;
+        width: 50px;
+        height: 42px;
+        line-height: 40px;
+        border-radius: 50%;
+        background-color: $header-color;
+    }
+    }
+
+    .testimonial-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .testimonial-slider-3 {
+        margin-right: -68%;
+    }
+}
+
+.testimonial-box-items-3 {
+    position: relative;
+    z-index: 9;
+    border-radius: 20px;
+    margin-top: 30px;
+
+    &::before {
+        @include before;
+        background-color: $white;
+        border-radius: 20px;
+        z-index: -1;
+        top: 15px;
+        height: initial;
+    }
+
+    .quote-icon {
+        margin-bottom: 25px;
+        padding: 0 30px;
+    }
+
+    .text {
+        text-transform: capitalize;
+        color: #5C707E;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 180%;
+        padding: 0 30px;
+    }
+
+    .testimonial-bottom {
+        padding: 15px 30px;
+        background-color: #FEF4DE;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin-top: 35px;
+        @include flex;
+        justify-content: space-between;
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            .client-img {
+                img {
+                    border-radius: 50%;
+                    border: 3px solid $white;
+                }
+            }
+
+            .info-content {
+                p {
+                    b {
+                        font-weight: 600;
+                        color: $header-color;
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .video-btn {
+            display: inline-block;
+            width: 58px;
+            height: 58px;
+            line-height: 58px;
+            border-radius: 50%;
+            text-align: center;
+            background: rgba(243, 159, 95, 0.2);
+            color: $theme-color;
+
+            &:hover {
+                background-color: $theme-color;
+                color: $white;
+            }
+        }
+    }
+}
