@@ -286,12 +286,24 @@
         position: absolute;
         top: 0;
         left: 0;
+
+        @include breakpoint (max-xl4){
+            opacity: .3;
+        }
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
     }
 
     .mother-shape {
         position: absolute;
         bottom: 50px;
         right: 0;
+
+        @include breakpoint (max-xl4){
+            opacity: .3;
+        }
     }
 
     .bottom-shape {

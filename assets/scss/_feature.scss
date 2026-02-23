@@ -502,7 +502,7 @@
         }
     }
 
-    &:hover {
+    &.active {
         .bg-image {
             opacity: 1;
             visibility: visible;
@@ -1124,6 +1124,10 @@
         max-width: 350px;
          margin-left: 60px;
 
+        @include breakpoint (max-xl){
+            margin-left: 0;
+        }
+
         li {
             display: flex;
             align-items: center;
@@ -1150,6 +1154,10 @@
 
             &:nth-last-of-type(2){
                 margin-left: 30px;
+
+                @include breakpoint (max-xl){
+                    margin-left: 0;
+                }
             }
 
             .icon {
@@ -1179,6 +1187,10 @@
             li {
                  &:nth-last-of-type(2){
                     margin-left: -30px;
+
+                    @include breakpoint (max-xl){
+                        margin-left: 0;
+                    }
                 }
             }
         }
@@ -1200,12 +1212,20 @@
         position: absolute;
         bottom: 40px;
         right: 40px;
+
+        @include breakpoint (max-xl){
+            opacity: .3;
+        }
     }
 
     .girl-shape {
         position: absolute;
         left: 50px;
         top: 40%;
+
+        @include breakpoint (max-xl){
+            opacity: .3;
+        }
     }
 
     .section-title {
@@ -1323,19 +1343,59 @@
     position: relative;
     z-index: 1;
 
+    @include breakpoint (max-xl4){
+        background-image: none !important;
+        background-color: #E6E8FC;
+        border-radius: 16px;
+    }
+
+    @include breakpoint (max-xxxl){
+        margin: 0 40px;
+    }
+
+    @include breakpoint (max-xxl){
+        margin: 0 30px;
+    }
+
+    @include breakpoint (max-xl){
+        margin: 0 20px;
+    }
+
+    @include breakpoint (max-xxs){
+        margin: 0 16px;
+    }
+
     .line-shape {
         position: absolute;
         top: 52%;
         z-index: -1;
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
+
+        img {
+            width: 100%;
+        }
     }
 
     .section-title-area {
         border-bottom: 1px solid rgba(56, 84, 105, .20);
         padding-bottom: 50px;
 
+        @include breakpoint (max-lg){
+            justify-content: center;
+            text-align: center;
+        }
+
         .info-box {
             @include flex;
             gap: 30px;
+
+            @include breakpoint (max-md){
+                flex-wrap: wrap;
+                justify-content: center;
+            }
 
              .author-icon {
                 @include flex;
@@ -1383,11 +1443,19 @@
         position: absolute;
         bottom: 70px;
         left: 60px;
+
+        @include breakpoint (max-xl){
+            opacity: .2;
+        }
     }
 }
 
 .how-work-box-3 {
     margin-top: 135px;
+
+    @include breakpoint (max-xl){
+       margin-top: 30px;
+    }
 
     &.style-2 {
         margin-top: 30px;
@@ -1463,17 +1531,32 @@
             margin-left: auto;
             text-align: center;
             margin-right: -40px;
+
+             @include breakpoint (max-xl){
+                margin-right: 0;
+                max-width: initial;
+                margin-left: initial;
+            }
         }
 
         .step-box {
             margin-left: auto !important;
             text-align: center;
             margin: initial;
+
+             @include breakpoint (max-xl){
+                margin-left: initial !important;
+                margin: 0 auto !important;
+            }
         }
     }
 
     &.style-box-2 {
         margin-left: 90px;
+
+        @include breakpoint (max-xl){
+            margin-left: 0;
+        }
     }
 
     &.style-box-3 {
@@ -1483,11 +1566,21 @@
             max-width: 205px;
             text-align: center;
             margin-left: -25px;
+
+            @include breakpoint (max-xl){
+                margin-left: 0;
+                max-width: initial;
+            }
         }
 
         .step-box {
             margin-left: initial;
             margin-left: 10px;
+
+            @include breakpoint (max-xl){
+                margin-left: 0;
+                margin: 0 auto;
+            }
         }
     }
 }

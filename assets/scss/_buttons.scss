@@ -1,38 +1,48 @@
 //>>>>> Component Button Here <<<<<//
 .theme-btn {
   position: relative;
-  display: inline-block; // ensure size fits content
+  display: inline-block;
   cursor: pointer;
   overflow: hidden;
 
-  .theme-text {
+  .theme-text,
+  .theme-text2 {
     display: inline-flex;
     font-size: 16px;
     font-weight: 700;
     font-family: $heading-font;
     color: $white;
     position: absolute;
-    top: 50%;
     left: 0;
     right: 0;
-    transform: translateY(-50%);
     justify-content: center;
     align-items: center;
     gap: 12px;
-    z-index: 2;
-    //transition: color 0.3s ease; 
-    overflow: hidden;
-    transition: all 700ms ease;
-    z-index: 99;
     text-transform: capitalize;
+    transition: transform 0.6s ease;
+    z-index: 99;
+  }
+
+  /* First Text (Visible Initially) */
+  .theme-text {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Second Text (Hidden Below Initially) */
+  .theme-text2 {
+    top: 50%;
+    transform: translateY(150%);
   }
 
   .theme-bg {
     display: block;
+
     svg {
       width: 100%;
       max-width: 170px;
       display: block;
+
       path {
         transition: fill 0.4s ease;
       }
@@ -40,76 +50,31 @@
   }
 
   &:hover {
-    .theme-bg svg path {
-      fill: $header-color; 
+
+    /* First Text Goes Up */
+    .theme-text {
+      transform: translateY(-250%);
     }
 
-	.theme-text {
-		 animation: slideRight 600ms;
-	}
+    /* Second Text Comes From Bottom */
+    .theme-text2 {
+      transform: translateY(-50%);
+    }
+
+    .theme-bg svg path {
+      fill: $header-color;
+    }
   }
 
   &.hover-header {
-	 &:hover {
-		.theme-bg svg path {
-			fill: $theme-color; 
-		}
-	}
+    &:hover {
+      .theme-bg svg path {
+        fill: $theme-color;
+      }
+    }
   }
 }
 
-
-// .theme-btn {
-//   position: relative;
-//   height: 59px;
-//   border: 0;
-//   padding: 0;
-//   background: none;
-//   cursor: pointer;
-//   color: #F39F5F;
-//   white-space: nowrap;
-//   transition: transform 0.3s ease;
-
-//   &:hover {
-//     transform: translateY(-3px);
-//     color: $header-color;
-
-//     .theme-btn-text {
-//       color: #000;
-//     }
-//   }
-
-//   .btn-bg {
-//     position: absolute;
-//     inset: 0;
-//     display: flex;
-
-//     .btn-left,
-//     .btn-right {
-//       width: 85px;
-//       height: 59px;
-//       flex-shrink: 0;
-//     }
-
-//     .btn-middle {
-//       flex: 1;
-//       background: currentColor;
-//     }
-//   }
-
-//   /* Text */
-//   .theme-btn-text {
-//     position: relative;
-//     z-index: 2;
-//     padding: 0 40px;
-//     display: inline-flex;
-//     align-items: center;
-//     height: 59px;
-//     font-size: 15px;
-//     font-weight: 500;
-//     color: #232323;
-//   }
-// }
 
 
 //>>>>> Component Button End <<<<<//

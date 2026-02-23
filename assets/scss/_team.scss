@@ -446,6 +446,10 @@
     max-width: 450px;
     position: relative;
 
+    @include breakpoint (max-md){
+       max-width: initial;
+    }
+
     .shape {
         position: absolute;
         top: 50%;
@@ -453,6 +457,10 @@
         right: 0;
         transform: translateY(-50%);
         text-align: center;
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
     }
 
     .thumb {
@@ -589,6 +597,10 @@
             left: 60px;
             opacity: 1;
             visibility: visible;
+
+            @include breakpoint (max-xxl){
+               left: 25px;
+            }
         }
 
         .content {
@@ -600,6 +612,10 @@
 
 .team-slider-3 {
     margin-right: -35%;
+
+    @include breakpoint (max-xxl){
+        margin-right: 0;
+    }
 }
 
 .team-section-3 {
@@ -609,5 +625,9 @@
         position: absolute;
         right: 10%;
         top: 2%;
+
+        @include breakpoint (max-xl){
+            opacity: .3;
+        }
     }
 }

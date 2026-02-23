@@ -144,11 +144,11 @@
       Hover Active Js Start
     ================================ */
 
-    $(".activities-wrapper-items, .values-list li ").hover(
+    $(".activities-wrapper-items, .values-list li, .counter-box-items ").hover(
 		// Function to run when the mouse enters the element
 		function () {
 			// Remove the "active" class from all elements
-			$(".activities-wrapper-items, .values-list li").removeClass("active");
+			$(".activities-wrapper-items, .values-list li, .counter-box-items").removeClass("active");
 			// Add the "active" class to the currently hovered element
 			$(this).addClass("active");
 		}
@@ -309,13 +309,13 @@
                 slidesPerView: 3,
             },
             1199: {
-                slidesPerView: 2.5,
-            },
-            991: {
                 slidesPerView: 2,
             },
+            991: {
+                slidesPerView: 2.6,
+            },
             767: {
-                slidesPerView: 1.5,
+                slidesPerView: 2,
             },
             575: {
                 slidesPerView: 1,
@@ -452,12 +452,14 @@
             clickable: true,
         },
         breakpoints: {
-            
-            1199: {
+            1399: {
                 slidesPerView: 4,
             },
-            991: {
+             1199: {
                 slidesPerView: 3,
+            },
+            991: {
+                slidesPerView: 2.5,
             },
             767: {
                 slidesPerView: 2,
@@ -471,6 +473,42 @@
         },
     });
     }
+
+     if ($('.team-slider-inner').length > 0) {
+        const teamSliderInner = new Swiper(".team-slider-inner", {
+            spaceBetween: 30,
+            speed: 1300,
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+        pagination: {
+                el: ".dotss",
+                clickable: true,
+            },
+            breakpoints: {
+                
+                1199: {
+                    slidesPerView: 4,
+                },
+                991: {
+                    slidesPerView: 3,
+                },
+                767: {
+                    slidesPerView: 2,
+                },
+                575: {
+                    slidesPerView: 1.4,
+                },
+                0: {
+                    slidesPerView: 1,
+                },
+            },
+        });
+    }
+
 
     /* ================================
       Testimonial Slider Js Start
@@ -575,13 +613,46 @@
                 slidesPerView: 3,
             },
             991: {
-                slidesPerView: 3,
-            },
-            767: {
                 slidesPerView: 2,
             },
+            767: {
+                slidesPerView: 1,
+            },
             575: {
-                slidesPerView: 1.4,
+                slidesPerView: 1,
+            },
+            0: {
+                slidesPerView: 1,
+            },
+        },
+    });
+   }
+
+    if ($('.testimonial-slider-inner').length > 0) {
+    const testimonialSliderInner = new Swiper(".testimonial-slider-inner", {
+        spaceBetween: 30,
+        speed: 1300,
+        loop: true,
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".array-next",
+            prevEl: ".array-prev",
+        },
+        breakpoints: {
+            1199: {
+                slidesPerView: 2,
+            },
+            991: {
+                slidesPerView: 2,
+            },
+            767: {
+                slidesPerView: 1,
+            },
+            575: {
+                slidesPerView: 1,
             },
             0: {
                 slidesPerView: 1,

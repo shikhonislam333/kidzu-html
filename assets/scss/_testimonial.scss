@@ -154,6 +154,11 @@
      padding: 60px 60px;
      margin-bottom: 50px;
 
+     @include breakpoint (max-xl){
+        padding: 0;
+        margin-bottom: 0;
+     }
+
     .array-button {
     @include flex;
     gap: 10px;
@@ -174,10 +179,22 @@
         left: 0;
         right: 0;
         bottom: 0;
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
     }
 
     .testimonial-slider-3 {
         margin-right: -68%;
+
+        @include breakpoint (max-xxxl){
+            margin-right: -45%;
+        }
+
+         @include breakpoint (max-xl){
+            margin-right: 0;
+        }
     }
 }
 
@@ -208,6 +225,11 @@
         font-weight: 600;
         line-height: 180%;
         padding: 0 30px;
+
+        @include breakpoint (max-xl){
+            line-height: 150%;
+            font-size: 15px;
+        }
     }
 
     .testimonial-bottom {
@@ -257,5 +279,40 @@
                 color: $white;
             }
         }
+    }
+}
+
+.testimonial-section-3 {
+    @include breakpoint (max-xl){
+       background-color: #FEDFEF;
+       padding: 100px 0;
+       margin-bottom: 100px;
+    }
+
+    @include breakpoint (max-lg){
+        padding: 80px 0;
+        margin-bottom: 80px;
+    }
+}
+
+.testimonial-section-inner {
+    background-color: #FEDFEF;
+    margin: 0 40px;
+    border-radius: 40px;
+
+    @include breakpoint (max-xxxl){
+        margin: 0 40px;
+    }
+
+    @include breakpoint (max-xxl){
+        margin: 0 30px;
+    }
+
+    @include breakpoint (max-xl){
+        margin: 0 20px;
+    }
+
+    @include breakpoint (max-xxs){
+        margin: 0 16px;
     }
 }
