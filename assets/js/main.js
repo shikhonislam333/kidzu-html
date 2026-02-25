@@ -484,8 +484,42 @@
                 delay: 2000,
                 disableOnInteraction: false,
             },
-        pagination: {
+            pagination: {
                 el: ".dotss",
+                clickable: true,
+            },
+            breakpoints: {
+                
+                1199: {
+                    slidesPerView: 4,
+                },
+                991: {
+                    slidesPerView: 3,
+                },
+                767: {
+                    slidesPerView: 2,
+                },
+                575: {
+                    slidesPerView: 1.4,
+                },
+                0: {
+                    slidesPerView: 1,
+                },
+            },
+        });
+    }
+
+     if ($('.team-slider-inner2').length > 0) {
+        const teamSliderInner2 = new Swiper(".team-slider-inner2", {
+            spaceBetween: 30,
+            speed: 1300,
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".dot",
                 clickable: true,
             },
             breakpoints: {
