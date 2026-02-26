@@ -316,3 +316,32 @@
         margin: 0 16px;
     }
 }
+
+.testimonial-inner-page {
+    background-color: $bg-color;
+    border-radius: 40px;
+    margin: 0 50px;
+
+    @include breakpoint (max-xxxl){
+        margin: 0 40px;
+    }
+
+    @include breakpoint (max-xxl){
+        margin: 0 30px;
+    }
+
+    @include breakpoint (max-xl){
+        margin: 0 20px;
+    }
+
+    @include breakpoint (max-xxs){
+        margin: 0 16px;
+    }
+
+    .testimonial-box-items-2 {
+        @include breakpoint (max-xl){
+            background-color: #C9DDE2;
+        }
+
+    }
+}
