@@ -167,10 +167,12 @@
     @include flex;
     justify-content: space-between;
     gap: 30px;
+    margin-top: -30px;
 
     @include breakpoint (max-xxl){
         grid-template-columns: repeat(2, 1fr);
         display: grid;
+        margin-top: 0;
     }
 
     @include breakpoint (max-lg){
@@ -397,7 +399,11 @@
 
         &.active {
             width: 530px;
-            height: 512px;
+            height: 440px;
+
+            @include breakpoint (max-xxl){
+                height: 512px;
+            }
 
             .team-items {
                 opacity: 0;

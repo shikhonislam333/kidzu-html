@@ -1593,9 +1593,24 @@
     }
 }
 
-// .facility-section-inner {
-//     background-color: #E8EAFF;
-// }
+.facility-section-inner {
+    position: relative;
+
+    @include breakpoint (max-xl){
+        background-image: none !important;
+        background-color: #E8EAFF;
+    }
+
+    .shape1 {
+        position: absolute;
+        right: 10%;
+        top: -3%;
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
+    }
+}
 
 .facility-inner-box {
     margin-top: 30px;
@@ -1650,5 +1665,27 @@
             font-size: $heading-font;
             text-transform: uppercase;
         }
+    }
+}
+
+.schedule-section-inner {
+    background-color: rgba(230, 232, 252, 0.25);
+    border-radius: 40px;
+    margin: 0 50px;
+
+    @include breakpoint (max-xxxl){
+        margin: 0 40px;
+    }
+
+    @include breakpoint (max-xxl){
+        margin: 0 30px;
+    }
+
+    @include breakpoint (max-xl){
+        margin: 0 20px;
+    }
+
+    @include breakpoint (max-xxs){
+        margin: 0 16px;
     }
 }

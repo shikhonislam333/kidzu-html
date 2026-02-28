@@ -144,11 +144,11 @@
       Hover Active Js Start
     ================================ */
 
-    $(".activities-wrapper-items, .values-list li, .counter-box-items ").hover(
+    $(".activities-wrapper-items, .values-list li, .counter-box-items, .program-box-items-2 ").hover(
 		// Function to run when the mouse enters the element
 		function () {
 			// Remove the "active" class from all elements
-			$(".activities-wrapper-items, .values-list li, .counter-box-items").removeClass("active");
+			$(".activities-wrapper-items, .values-list li, .counter-box-items, .program-box-items-2").removeClass("active");
 			// Add the "active" class to the currently hovered element
 			$(this).addClass("active");
 		}

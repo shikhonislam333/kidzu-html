@@ -363,3 +363,165 @@
         }
     }
 }
+
+.login-wrapper {
+    position: relative;
+
+    .thumb {
+        img {
+            @include imgw;
+        }
+    }
+
+    .login-items {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+
+        .contact-left-items {
+            padding-left: 170px;
+            padding-top: 80px;
+
+            h2 {
+                color: $white;
+                margin-bottom: 10px;
+            }
+
+            p {
+                color: $white;
+            }
+
+            .form-group {
+        margin-bottom: 25px;
+
+        label {
+            display: block;
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 8px;
+            font-weight: 500;
+
+            span {
+                color: #ff914d; // Asterisk color
+                margin-left: 2px;
+            }
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            outline: none;
+            padding: 14px 20px;
+            color: #333;
+            line-height: 1;
+            border-radius: 8px;
+
+            &::placeholder {
+                color: $text-color;
+            }
+        }
+
+        .password-wrapper {
+            position: relative;
+            
+            i {
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #fff;
+                cursor: pointer;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .remember-forget-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 35px;
+
+        .custom-checkbox {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            position: relative;
+
+            input {
+                display: none; // Hide default checkbox
+            }
+
+            .checkmark {
+                height: 20px;
+                width: 20px;
+                background-color: #fff;
+                margin-right: 10px;
+                display: inline-block;
+                position: relative;
+                border-radius: 2px;
+
+                &::after {
+                    content: "\f00c"; // FontAwesome check icon
+                    font-family: "Font Awesome 6 Pro";
+                    font-weight: 900;
+                    color: $theme-color;
+                    font-size: 12px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        .forget-pass {
+            color: #fff;
+            text-decoration: underline;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+
+        button {
+            width: 100%;
+            margin-bottom: 30px;
+            transition: 0.3s;
+            background-color: $header-color;
+            color: $white;
+            padding: 16px 22px;
+            border-radius: 12px;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+        .footer-text {
+            font-size: 15px;
+            color: #808080;
+
+            a {
+                color: #000000;
+                text-decoration: underline;
+                font-weight: 600;
+                margin-left: 5px;
+            }
+        }
+        }
+
+        .login-image {
+            max-width: 400px;
+
+            img {
+                @include imgw;
+                border-radius: 16px;
+            }
+        }
+    }
+}
