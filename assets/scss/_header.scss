@@ -784,6 +784,18 @@
 			padding: 0 0;
 			margin-top: 0;
 		}
+
+		.theme-btn {
+			&:hover {
+				.theme-bg svg path {
+					fill: $white;
+				}
+
+				span {
+					color: $header-color;
+				}
+			}
+		}
 	}
 }
 

@@ -322,7 +322,7 @@
    }
 
    /* ================================
-      Program Slider Js Start
+      Extra Activities Slider Js Start
     ================================ */
    if ($('.extra-activities-slider').length > 0) {
     const extraActivitiesSlider = new Swiper(".extra-activities-slider", {
@@ -1038,8 +1038,6 @@
     }
 
   
-
-    
     
     }); // End Document Ready Function
 

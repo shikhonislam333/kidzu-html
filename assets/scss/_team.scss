@@ -184,6 +184,19 @@
         margin-top: 30px;
     }
 
+    .team-items {
+        position: relative;
+          .team-shape {
+            position: absolute;
+            bottom: 70px;
+            left: -70px;
+
+            @include breakpoint (max-xxl){
+                display: none;
+            }
+        }
+    }
+
     .team-main-items {
         margin-top: 30px;
         height: 512px;
@@ -199,6 +212,7 @@
         &.bg-2 {
             .team-items {
                 background-color: #532822;
+              
             }
 
             .team-hover-items {
@@ -206,6 +220,34 @@
 
                  .team-image {
                     margin-top: -160px;
+                }
+
+                .team-shape {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+
+                .star {
+                    position: absolute;
+                    top: 50px;
+                    right: 45px;
+                    z-index: -1;
+
+                    @include breakpoint (max-xxl){
+                        display: none;
+                    }
+                }
+
+                .star-2 {
+                    position: absolute;
+                    top: 47%;
+                    right: 70px;
+                    z-index: -1;
+
+                    @include breakpoint (max-xxl){
+                        display: none;
+                    }
                 }
             }
         }
@@ -224,6 +266,28 @@
 
                  .team-image {
                     margin-top: -160px;
+                }
+
+                .shape-3 {
+                    position: absolute;
+                    top: 50px;
+                    right: 45px;
+                    z-index: -1;
+
+                    @include breakpoint (max-xxl){
+                        display: none;
+                    }
+                }
+
+                .shape-4 {
+                    position: absolute;
+                    top: 47%;
+                    right: 70px;
+                    z-index: -1;
+
+                    @include breakpoint (max-xxl){
+                        display: none;
+                    }
                 }
             }
         }
@@ -254,6 +318,17 @@
 
                 .team-image {
                     margin-top: -210px;
+                }
+
+                 .shape-5 {
+                        position: absolute;
+                        top: 6%;
+                        right: 122px;
+                        z-index: -1;
+
+                    @include breakpoint (max-xxl){
+                        display: none;
+                    }
                 }
             }
         }
