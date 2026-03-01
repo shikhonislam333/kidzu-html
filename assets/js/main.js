@@ -184,49 +184,45 @@
         });
     }
 
+     if($('.hero-slider').length > 0) {
+        const heroSlider = new Swiper(".hero-slider", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            //Pagination
+            pagination: {
+                el: ".hero-dot",
+                clickable: true,
+            },
 
-  // Main Slider
-	var slider = new Swiper('.hero-slider', {
-		slidesPerView: 1,
-		spaceBetween: 0,
-		loop: true,
-		autoplay: {
-			enabled: true,
-			delay: 6000
-		},
-		// Navigation arrows
-		navigation: {
-			nextEl: '.main-slider-next',
-			prevEl: '.main-slider-prev',
-			clickable: true,
-		},
-		//Pagination
-		pagination: {
-			el: ".slider-one_pagination",
-			clickable: true,
-		},
-		speed: 500,
-		breakpoints: {
-			'1600': {
-				slidesPerView: 1,
-			},
-			'1200': {
-				slidesPerView: 1,
-			},
-			'992': {
-				slidesPerView: 1,
-			},
-			'768': {
-				slidesPerView: 1,
-			},
-			'576': {
-				slidesPerView: 1,
-			},
-			'0': {
-				slidesPerView: 1,
-			},
-		},
-	});
+            speed: 500,
+            breakpoints: {
+                '1600': {
+                    slidesPerView: 1,
+                },
+                '1200': {
+                    slidesPerView: 1,
+                },
+                '992': {
+                    slidesPerView: 1,
+                },
+                '768': {
+                    slidesPerView: 1,
+                },
+                '576': {
+                    slidesPerView: 1,
+                },
+                '0': {
+                    slidesPerView: 1,
+                },
+            },
+        });
+    }
+
 
      /* ================================
        Banner Active Js Start
@@ -243,12 +239,10 @@
                     disableOnInteraction: false,
                     pauseOnMouseEnter: false,  
                 },
-                navigation: {
-                    nextEl: ".array-prev",
-                    prevEl: ".array-next",
+                pagination: {
+                    el: ".hero-dot",
+                    clickable: true,
                 },
-              
-		
             });
         }
 
@@ -761,75 +755,75 @@
 
 
 
-    /* ================================
+        /* ================================
         Mouse Cursor Animation Js Start
     ================================ */
 
-    // if ($(".mouseCursor").length > 0) {
-    //     function itCursor() {
-    //         var myCursor = jQuery(".mouseCursor");
-    //         if (myCursor.length) {
-    //             if ($("body")) {
-    //                 const e = document.querySelector(".cursor-inner"),
-    //                     t = document.querySelector(".cursor-outer");
-    //                 let n, i = 0, o = !1;
-    //                 window.onmousemove = function(s) {
-    //                     if (!o) {
-    //                         t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)";
-    //                     }
-    //                     e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)";
-    //                     n = s.clientY;
-    //                     i = s.clientX;
-    //                 };
-    //                 $("body").on("mouseenter", "button, a, .cursor-pointer", function() {
-    //                     e.classList.add("cursor-hover");
-    //                     t.classList.add("cursor-hover");
-    //                 });
-    //                 $("body").on("mouseleave", "button, a, .cursor-pointer", function() {
-    //                     if (!($(this).is("a", "button") && $(this).closest(".cursor-pointer").length)) {
-    //                         e.classList.remove("cursor-hover");
-    //                         t.classList.remove("cursor-hover");
-    //                     }
-    //                 });
-    //                 e.style.visibility = "visible";
-    //                 t.style.visibility = "visible";
-    //             }
-    //         }
-    //     }
-    //     itCursor();
-    // }
+    if ($(".mouseCursor").length > 0) {
+        function itCursor() {
+            var myCursor = jQuery(".mouseCursor");
+            if (myCursor.length) {
+                if ($("body")) {
+                    const e = document.querySelector(".cursor-inner"),
+                        t = document.querySelector(".cursor-outer");
+                    let n, i = 0, o = !1;
+                    window.onmousemove = function(s) {
+                        if (!o) {
+                            t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)";
+                        }
+                        e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)";
+                        n = s.clientY;
+                        i = s.clientX;
+                    };
+                    $("body").on("mouseenter", "button, a, .cursor-pointer", function() {
+                        e.classList.add("cursor-hover");
+                        t.classList.add("cursor-hover");
+                    });
+                    $("body").on("mouseleave", "button, a, .cursor-pointer", function() {
+                        if (!($(this).is("a", "button") && $(this).closest(".cursor-pointer").length)) {
+                            e.classList.remove("cursor-hover");
+                            t.classList.remove("cursor-hover");
+                        }
+                    });
+                    e.style.visibility = "visible";
+                    t.style.visibility = "visible";
+                }
+            }
+        }
+        itCursor();
+    }
 
     /* ================================
         Back To Top Button Js Start
     ================================ */
-    // $windowOn.on('scroll', function() {
-    //     var windowScrollTop = $(this).scrollTop();
-    //     var windowHeight = $(window).height();
-    //     var documentHeight = $(document).height();
+    $windowOn.on('scroll', function() {
+        var windowScrollTop = $(this).scrollTop();
+        var windowHeight = $(window).height();
+        var documentHeight = $(document).height();
 
-    //     if (windowScrollTop + windowHeight >= documentHeight - 10) {
-    //         $("#back-top").addClass("show");
-    //     } else {
-    //         $("#back-top").removeClass("show");
-    //     }
-    // });
+        if (windowScrollTop + windowHeight >= documentHeight - 10) {
+            $("#back-top").addClass("show");
+        } else {
+            $("#back-top").removeClass("show");
+        }
+    });
 
-    // $documentOn.on('click', '#back-top', function() {
-    //     $('html, body').animate({ scrollTop: 0 }, 800);
-    //     return false;
-    // });
+    $documentOn.on('click', '#back-top', function() {
+        $('html, body').animate({ scrollTop: 0 }, 800);
+        return false;
+    });
 
     /* ================================
        Search Popup Toggle Js Start
     ================================ */
 
-    // if ($(".search-toggler").length) {
-    //     $(".search-toggler").on("click", function(e) {
-    //         e.preventDefault();
-    //         $(".search-popup").toggleClass("active");
-    //         $("body").toggleClass("locked");
-    //     });
-    // }
+    if ($(".search-toggler").length) {
+        $(".search-toggler").on("click", function(e) {
+            e.preventDefault();
+            $(".search-popup").toggleClass("active");
+            $("body").toggleClass("locked");
+        });
+    }
 
     
 	
@@ -1076,74 +1070,12 @@
     
     }); // End Document Ready Function
 
-     /* ================================
-      Pricing Toggle Js Start
-    ================================ */
-
-//    document.addEventListener("DOMContentLoaded", () => {
-//     const monthlyBtn = document.querySelector(".monthly-label");
-//     const yearlyBtn = document.querySelector(".yearly-label");
-//     const prices = document.querySelectorAll(".price");
-
-//     // Only run if the page has the pricing elements
-//     if (!monthlyBtn || !yearlyBtn || prices.length === 0) return;
-
-//     let isAnimating = false;
-
-//     function changePrice(type) {
-//         if (isAnimating) return; // Prevent double click bug
-//         isAnimating = true;
-
-//         prices.forEach(price => {
-//             price.classList.add("fade-out");
-
-//             setTimeout(() => {
-//                 const value = price.dataset[type];
-//                 const period = type === "monthly" ? "months" : "year";
-
-//                 price.innerHTML = `$${value}<sub>/ ${period}</sub>`;
-
-//                 price.classList.remove("fade-out");
-//                 price.classList.add("fade-in");
-
-//                 setTimeout(() => {
-//                     price.classList.remove("fade-in");
-//                     isAnimating = false;
-//                 }, 300);
-//             }, 300);
-//         });
-//     }
-
-//     monthlyBtn.addEventListener("click", function () {
-//         if (!this.classList.contains("active")) {
-//             monthlyBtn.classList.add("active");
-//             yearlyBtn.classList.remove("active");
-//             changePrice("monthly");
-//         }
-//     });
-
-//     yearlyBtn.addEventListener("click", function () {
-//         if (!this.classList.contains("active")) {
-//             yearlyBtn.classList.add("active");
-//             monthlyBtn.classList.remove("active");
-//             changePrice("yearly");
-//         }
-//     });
-//     });
-
-
-     /* ================================
+    /* ================================
        Preloader Js Start
     ================================ */
-
-    //  function loader() {
-    //     $(window).on('load', function() {
-    //         // Animate loader off screen
-    //         $(".preloader").addClass('loaded');                    
-    //         $(".preloader").delay(600).fadeOut();                       
-    //     });
-    // }
-    // loader();
+    $windowOn.on('load', function() {
+        $(".preloader").fadeOut(600);
+    });
 
 
   

@@ -354,6 +354,19 @@
                         }
                     }
 
+                     h3 {
+                        font-weight: 700;
+                        font-size: 24px;
+
+                        a {
+                            color: $text-color;
+
+                            &:hover {
+                                color: $theme-color;
+                            }
+                        }
+                    }
+
                     span {
                         font-size: 16px;
                         font-weight: 600;

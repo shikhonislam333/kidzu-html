@@ -29,12 +29,12 @@
   .mean-container .mean-nav ul li a {
 	width: 100%;
 	padding: 10px 0;
-	color: $header-color;
+	color: #fff;
 	font-size: 16px;
 	line-height: 2;
-	font-weight: 500;
+	font-weight: 700;
 	text-transform: capitalize;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.20) !important;
+	border-bottom: 1px solid #c1d2ce12 !important;
 	border: none;
     font-family: $heading-font;
 
@@ -78,4 +78,5 @@
 	border-top: 0;
 	margin-bottom: 20px;
   }
+
 

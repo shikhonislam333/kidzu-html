@@ -986,5 +986,16 @@
                 }
             }
         }
+
+         h2 {
+            margin-bottom: 5px;
+            font-size: 24px;
+
+            a {
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
     }
 }

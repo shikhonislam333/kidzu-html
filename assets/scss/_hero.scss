@@ -1,8 +1,19 @@
 .hero-1 {
     background-color: $bg-color;
-    padding: 100px 0 0;
+    padding: 160px 0 0;
     position: relative;
     overflow: hidden;
+
+    .swiper-dot {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%) rotate(90deg);
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
+    }
 
     .shape1 {
         position: absolute;
@@ -302,8 +313,28 @@
 
 .hero-2 {
     background-color: #EFF5F6;
-    padding: 150px 0 190px;
+    padding: 270px 0 190px;
     position: relative;
+
+     @include breakpoint (max-xl){
+        padding-top: 220px;
+        padding-bottom: 170px;
+    }
+
+    @include breakpoint (max-lg){
+        padding-top: 190px;
+        padding-bottom: 160px;
+    }
+
+    @include breakpoint (max-md){
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+
+    @include breakpoint (max-sm){
+        padding-top: 140px;
+        padding-bottom: 140px;
+    }
 
     .star {
         position: absolute;
@@ -637,10 +668,41 @@
         transform: translatey(0px);
         transition: all 2500ms ease;
     }
-}
+
+    .swiper-dots {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%) rotate(-90deg);
+        z-index: 99;
+
+        @include breakpoint (max-xxxl){
+            display: none;
+        }
+
+
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            transition: 0.6s;
+            background-color: #FFFFFF;
+            opacity: 1;
+            border-radius: 10px;
+            &:not(:last-child){
+            margin-right: 5px;
+            }
+        }
+        .swiper-pagination-bullet.swiper-pagination-bullet-active {
+            background-color: $theme-color;
+            transition: 0.6s;
+            position: relative;
+        }
+
+        }
+    }
 
 .hero-3 {
-    padding: 200px 0 280px;
+    padding: 280px 0 280px;
     position: relative;
     z-index: 999;
 
@@ -657,7 +719,7 @@
     }
 
      @include breakpoint(max-md){
-        padding: 160px 0 110px;
+        padding: 200px 0 130px;
     }
 
     .hero-bg {
@@ -773,16 +835,15 @@
             }
 
             .content {
-                h4 {
+                .number {
                     font-weight: 700;
                     font-size: 24px;
+                    font-family: $heading-font;
+                    color: $white;
+                    display: block;
 
-                    a {
-                        color: $white;
-
-                        &:hover {
-                            color: $theme-color;
-                        }
+                    &:hover {
+                        color: $theme-color;
                     }
                 }
 
