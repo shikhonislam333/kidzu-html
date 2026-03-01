@@ -1039,33 +1039,6 @@
 
   
 
-    /* ================================
-       Advance Ani Js Start
-    ================================ */
-
-    // if (window.innerWidth > 1199) {
-    //     const items = document.querySelectorAll(".advance-wrap .advance-item");
-    //     if (items.length < 4) return;
-
-    //     const advanced = gsap.timeline({
-    //         scrollTrigger: {
-    //         trigger: ".advance-wrap",
-    //         start: "top 60%",
-    //         toggleActions: "play none none reverse",
-    //         markers: false,
-    //         },
-    //         defaults: {
-    //         ease: "power1.out", //
-    //         duration: 1,
-    //         },
-    //     });
-    //     advanced
-    //         .from(items[0], { xPercent: 100, rotate: -8 })
-    //         .from(items[1], { xPercent: 30, rotate: 4.13 }, "<")
-    //         .from(items[2], { xPercent: -30, rotate: -6.42 }, "<")
-    //         .from(items[3], { xPercent: -60, rotate: -12.15 }, "<");
-    // }
-
     
     
     }); // End Document Ready Function
