@@ -516,6 +516,10 @@
                 el: ".dot",
                 clickable: true,
             },
+             navigation: {
+                nextEl: ".array-next",
+                prevEl: ".array-prev",
+            },
             breakpoints: {
                 
                 1199: {
@@ -536,6 +540,7 @@
             },
         });
     }
+    
 
 
     /* ================================
@@ -685,6 +690,37 @@
             0: {
                 slidesPerView: 1,
             },
+        },
+    });
+   }
+
+    if ($('.testimonial-slider-4').length > 0) {
+    const testimonialSlider4 = new Swiper(".testimonial-slider-4", {
+        spaceBetween: 30,
+        speed: 1300,
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".dot",
+            clickable: true,
+        },
+        breakpoints: {
+             1199: {
+                    slidesPerView: 3,
+                },
+                767: {
+                    slidesPerView: 2,
+                },
+                575: {
+                    slidesPerView: 1,
+                },
+                0: {
+                    slidesPerView: 1,
+                },
         },
     });
    }

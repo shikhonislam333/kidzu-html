@@ -2811,3 +2811,200 @@
             }
         }
 }
+
+.program-box-items-4 {
+    padding: 20px 30px 36px;
+    position: relative;
+    z-index: 9;
+   // max-width: 420px;
+    text-align: center;
+    margin: 30px auto;
+
+    .program-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #70A6B1;
+        transition: all 500ms ease;
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 371 458"><path  d="M180.499 1.01957C228.479 0.655383 276.69 -1.7067 311.981 40.3475C348.649 84.0424 368.9 145.98 370.375 210.447C371.895 276.909 355.756 343.16 319.998 390.92C283.71 439.389 232.608 453.808 180.499 456.752C125.658 459.85 64.9802 460.19 28.2615 407.4C-7.46789 356.033 -0.110132 279.336 4.09606 210.447C7.86177 148.773 16.5925 85.8896 50.5519 42.3318C84.3879 -1.06785 132.853 1.38123 180.499 1.01957Z" /></svg>');
+        mask-repeat: no-repeat;
+        mask-position: center center;
+        mask-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        &.bg-2 {
+            background-color: $theme-color;
+        }
+
+        &.bg-3 {
+            background-color: $theme-color;
+        }
+
+        &.bg-3 {
+            background-color: $white;
+        }
+
+        &.bg-4 {
+            background-color: $bg-color;
+        }
+    }
+
+    .program-image {
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 308 237"><path fill-rule="evenodd" clip-rule="evenodd" d="M149.968 0.07171C188.87 -0.110783 227.96 -1.29441 256.574 19.7787C286.305 41.674 302.725 72.7107 303.921 105.015C305.153 138.318 292.067 171.516 263.075 195.448C233.652 219.736 192.218 226.961 149.968 228.436C105.502 229.989 56.3034 230.159 26.5315 203.707C-2.43828 177.967 3.52747 139.534 6.93789 105.015C9.99117 74.11 17.0702 42.5996 44.6048 20.773C72.0394 -0.974285 111.335 0.252935 149.968 0.07171Z" /></svg>');
+        mask-repeat: no-repeat;
+        mask-position: center center;
+        mask-size: cover;
+        
+        img {
+            @include imgw;
+        }
+    }
+
+    .program-content {
+        padding: 30px 20px 0;
+
+        @include breakpoint (max-sm){
+            padding: 20px 20px 0;
+        }
+
+        h3 {
+            margin-bottom: 5px;
+
+            a {
+                color: $white;
+            }
+        }
+
+        span {
+            color: $white;
+            font-weight: 600;
+            font-family: $heading-font;
+        }
+
+        p {
+            color: $white;
+            margin-top: 10px;
+            margin-bottom: 30px;
+
+            @include breakpoint (max-sm){
+                margin-bottom: 15px;
+            }
+        }
+
+        .arrow-icon {
+            width: 60px;
+            height: 55px;
+            line-height: 55px;
+            border-radius: 22px;
+            background-color: $theme-color;
+            display: inline-block;
+            color: $white;
+            @include transition;
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+            &:hover {
+                background-color: $header-color;
+            }
+
+            &.color-2 {
+                background-color: $header-color;
+
+                &:hover {
+                    background-color: $white;
+                    color: $header-color;
+                }
+            }
+        }
+
+        &.style-2 {
+            h3 {
+                a {
+                    color: $header-color;
+                }
+            }
+
+            span {
+                color: $theme-color;
+            }
+
+            p {
+                color: $text-color;
+            }
+        }
+    }
+
+    @include breakpoint (max-sm){
+        display: none;
+    }
+}
+
+.program-section-4 {
+    position: relative;
+    padding-bottom: 172px;
+    background-color: #EFF5F6;
+
+    @include breakpoint (max-xl){
+        padding-bottom: 155px;
+    }
+
+    @include breakpoint (max-lg){
+        padding-bottom: 120px;
+    }
+
+    .top-shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .bottom-shape {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .mask-shape {
+        position: absolute;
+        top: 15%;
+        left: 5%;
+    }
+
+    .pencil-shape {
+        position: absolute;
+        bottom: 10%;
+        left: 85px;
+        animation: rounded 5s linear infinite;
+    }
+
+    .mask-shape-2 {
+        position: absolute;
+        top: 18%;
+        right: 5%;
+        animation: rounded 5s linear infinite;
+    }
+
+    .compass-shape {
+        position: absolute;
+        bottom: 10%;
+        right: 85px;
+        animation: rounded 5s linear infinite;
+    }
+
+    .love-shape {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        animation: rounded 5s linear infinite;
+    }
+
+    .zebra-shape {
+        position: absolute;
+        top: 45%;
+        right: 0;
+    }
+}

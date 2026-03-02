@@ -1074,3 +1074,38 @@
         }
     }
 }
+
+.team-section-4 {
+    position: relative;
+
+    .top-shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .love-shape {
+        position: absolute;
+        bottom: 0;
+        left: 30px;
+
+        @include breakpoint (max-xxl){
+            left: 30px;
+        }
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
+    }
+
+    .frame-shape {
+        position: absolute;
+        top: 45%;
+        right: 0;
+        animation: rounded 5s linear infinite;
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
+    }
+}
