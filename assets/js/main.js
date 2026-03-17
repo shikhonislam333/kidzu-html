@@ -540,6 +540,34 @@
             },
         });
     }
+
+     const teamSlider5 = new Swiper(".team-slider-5", {
+            spaceBetween: 30,
+            speed: 1500,
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".array-prev",
+                prevEl: ".array-next",
+            },
+            breakpoints: {
+                1199: {
+                    slidesPerView: 3,
+                },
+                767: {
+                    slidesPerView: 2,
+                },
+                575: {
+                    slidesPerView: 1,
+                },
+                0: {
+                    slidesPerView: 1,
+                },
+            },
+        });
     
 
 

@@ -575,3 +575,153 @@
         }
     }
 }
+
+.contact-form-items5 {
+
+    .form-clt {
+        span {
+            color: $white;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        input,textarea {
+            width: 100%;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            border: 1px solid $white;
+            color: $white;
+            padding: 18px 20px;
+            border-radius: 6px;
+
+            @include breakpoint (max-md){
+                padding: 14px 20px;
+            }
+
+            @include breakpoint (max-sm){
+                padding: 12px 18px;
+            }
+
+            &::placeholder {
+                color: #ffffffb3;
+            }
+        }
+
+        textarea {
+            padding-bottom: 70px;
+        }
+    }
+}
+
+.contact-wrapper5 {
+    position: relative;
+    z-index: 9;
+    background-color: #70A6B1;
+    border-radius: 100px;
+    margin-top: 55px;
+
+    @include breakpoint (max-lg){
+       margin-top: 0;
+    }
+
+    .contact-image5 {
+       margin-top: -55px;
+       position: relative;
+       margin-right: 50px;
+
+        @include breakpoint (max-xl){
+          left: 35px;
+          height: 590px;
+        }
+
+        @include breakpoint (max-lg){
+            display: none;
+        }
+    
+        img {
+            @include imgw;
+            object-fit: cover;
+        }
+
+        .cricle-shape {
+            position: absolute;
+            top: 24%;
+            left: -27px;
+            z-index: -1;
+            animation: cir36 10s linear infinite;
+        }
+
+
+    }
+
+    .contact-content5 {
+        margin-top: 50px;
+        padding: 0 70px 80px;
+
+        @include breakpoint (max-xl){
+           margin-top: 60px;
+           padding: 0 35px 60px;
+        }
+
+        @include breakpoint (max-lg){
+           margin-top: 0;
+           margin-left: 0;
+           padding: 0;
+        }
+
+        @include breakpoint (max-lg){
+           padding: 50px;
+        }
+
+        @include breakpoint (max-md){
+            padding: 50px 40px;
+        }
+
+        @include breakpoint (max-sm){
+            padding: 40px 30px;
+        }
+
+        .contact-form-items {
+            .form-clt {
+                span {
+                    text-transform: capitalize;
+                }
+                
+                input,textarea {
+                    border-radius: 5px;
+                    &::placeholder {
+                        color: $white;
+                    }
+                }
+            }
+
+            .theme-btn {
+                color: $theme-color;
+                border-radius: 8px;
+
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.contact-section5 {
+    position: relative;
+
+    .line-1 {
+        position: absolute;
+        top: 42%;
+        left: 5%;
+        animation: rounded 5s linear infinite;
+    }
+
+    .line-2 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;;
+    }
+}

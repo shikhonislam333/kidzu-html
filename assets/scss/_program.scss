@@ -3005,3 +3005,137 @@
         right: 0;
     }
 }
+
+.program-box-items-22 {
+    padding: 75px 30px 40px;
+    position: relative;
+    z-index: 9;
+    max-width: 420px;
+    text-align: center;
+    margin: 30px auto;
+
+    .program-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #70A6B1;
+        transition: all 500ms ease;
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 288"><path fill-rule="evenodd" clip-rule="evenodd" d="M131.352 0.968405C166.359 0.739595 212.216 -6.12903 237.965 20.2925C264.719 47.745 268.813 92.0436 269.889 132.547C270.998 174.303 264.054 235.303 237.965 265.31C211.488 295.761 169.371 285.444 131.352 287.293C91.3384 289.24 47.0661 289.453 20.2754 256.287C-5.7936 224.014 -0.425215 175.827 2.64371 132.547C5.39126 93.7981 -4.50211 53.0434 20.2754 25.6771C44.9629 -1.5898 96.5877 1.19563 131.352 0.968405Z" /></svg>');
+        mask-repeat: no-repeat;
+        mask-position: center center;
+        mask-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        &.bg-2 {
+            background-color: $theme-color;
+        }
+
+        &.bg-3 {
+            background-color: #5866EB;
+        }
+
+        &.bg-4 {
+            background-color: #F25334;
+        }
+    }
+
+    .icon {
+        font-size: 50px;
+        color: $white;
+    }
+
+    .content {
+        padding: 30px 20px 0;
+
+        @include breakpoint (max-sm){
+            padding: 20px 20px 0;
+        }
+
+        h4 {
+            margin-bottom: 5px;
+            font-weight: 600;
+
+            a {
+                color: $white;
+            }
+        }
+
+        span {
+            color: $white;
+            font-weight: 600;
+            font-family: $heading-font;
+        }
+
+        p {
+            color: $white;
+            margin-top: 10px;
+            margin-bottom: 30px;
+
+            @include breakpoint (max-sm){
+                margin-bottom: 15px;
+            }
+        }
+
+        .arrow-icon {
+            width: 60px;
+            height: 55px;
+            line-height: 55px;
+            border-radius: 22px;
+            background-color: $theme-color;
+            display: inline-block;
+            color: $white;
+            @include transition;
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: 2px solid $white;
+            box-shadow: $shadow;
+
+            &:hover {
+                background-color: $white;
+                color: $header-color;
+            }
+
+            &.color-2 {
+                background-color: $theme-color;
+
+                &:hover {
+                    background-color: $white;
+                    color: $header-color;
+                }
+            }
+
+            &.color-3 {
+                background-color: #5866EB;
+
+                &:hover {
+                    background-color: $white;
+                    color: $header-color;
+                }
+            }
+
+            &.color-4 {
+                background-color: #F25334;
+
+                &:hover {
+                    background-color: $white;
+                    color: $header-color;
+                }
+            }
+        }
+    }
+}
+
+.program-section-5 {
+    position: relative;
+
+    .line-1 {
+        position: absolute;
+        top: 40%;
+        right: 0%;
+        animation: rounded 5s linear infinite;
+    }
+}
