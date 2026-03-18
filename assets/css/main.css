@@ -4067,6 +4067,14 @@ span {
 .hero-4 .hero-content p {
   font-size: 20px;
 }
+@media (max-width: 991px) {
+  .hero-4 .hero-content p {
+    font-size: 16px;
+  }
+  .hero-4 .hero-content p br {
+    display: none;
+  }
+}
 .hero-4 .hero-content .hero-button {
   display: flex;
   align-items: center;
@@ -4162,6 +4170,11 @@ span {
   padding: 120px 0 30px;
   position: relative;
   background-color: var(--bg);
+}
+@media (max-width: 991px) {
+  .hero-5 {
+    padding-top: 150px;
+  }
 }
 .hero-5 .doll-shape {
   position: absolute;

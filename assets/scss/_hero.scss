@@ -998,6 +998,14 @@
 
         p {
             font-size: 20px;
+
+            @include breakpoint (max-lg){
+                font-size: 16px;
+
+                br {
+                    display: none;
+                }
+            }
         }
 
         .hero-button {
@@ -1099,6 +1107,9 @@
     position: relative;
     background-color: $bg-color;
     
+    @include breakpoint (max-lg){
+        padding-top: 150px;
+    }
 
     .doll-shape {
         position: absolute;
