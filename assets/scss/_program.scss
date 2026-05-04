@@ -790,7 +790,7 @@
 
     .date-top {
         position: absolute;
-        top: 0;
+        top: 19px;
         left: 200px;
 
         @include breakpoint (max-xxl){
@@ -1169,16 +1169,14 @@
     .thumb {
         text-align: center;
         @include transition;
-        transition: all 900ms ease;
-        text-align: center;
 
         &.style-left {
             margin-left: 18px;
         }
 
         img {
-             transform: translateY(82%);
-            transition: transform 1.5s ease;
+            transform: translateY(82%);
+            transition: transform 1s cubic-bezier(.22,1,.36,1);
 
             @include breakpoint (max-xl){
                 transform: initial;
@@ -1228,10 +1226,6 @@
             position: absolute;
             top: 15px;
             left: 15px;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
             content: "";
             border: 1.13px dashed rgba(92, 112, 126, 1);
             border-radius: 30px;
@@ -1247,7 +1241,6 @@
             display: inline-block;
             background: rgba(243, 159, 95, 0.2);
             border-radius: 10px;
-            text-align: center;
             padding: 8px 12px;
             line-height: 1;
             margin-bottom: 20px;
@@ -1262,7 +1255,7 @@
                 font-size: 17px;
             }
 
-             @include breakpoint (max-md){
+            @include breakpoint (max-md){
                 font-size: 20px;
             }
             
@@ -1271,6 +1264,7 @@
                 background-repeat: no-repeat;
                 background-size: 0% 2px;
                 display: inline;
+                transition: all .4s ease;
 
                 &:hover {
                     color: $theme-color;
@@ -1291,7 +1285,6 @@
             display: inline-block;
             background: rgba(3, 166, 166, 0.1);
             border-radius: 10px;
-            text-align: center;
             text-transform: capitalize;
             padding: 8px 12px;
             line-height: 1;
@@ -1308,13 +1301,7 @@
                     position: absolute;
                     top: 0;
                     left: 50%;
-                    transform: translate(-50%,-50%);
-
-                    path {
-                        @include transition;
-
-                        fill: $theme-color;
-                    }
+                    transform: translate(-50%, -50%);
                 }
 
                 .bg {
@@ -1333,10 +1320,6 @@
                     .bg {
                         background-color: $theme-color;
                     }
-
-                    svg path {
-                        fill: $white;
-                    }
                 }
             }
         }
@@ -1348,9 +1331,9 @@
 
     &.active {
         .thumb {
-           img {
-              animation: cartoonUp 1.6s ease forwards;
-           }
+            img {
+                transform: translateY(0);
+            }
         }
     }
 }

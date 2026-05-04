@@ -8393,7 +8393,7 @@ span {
 }
 .activities-wrapper-items .date-top {
   position: absolute;
-  top: 0;
+  top: 19px;
   left: 200px;
 }
 @media (max-width: 1399px) {
@@ -8725,15 +8725,13 @@ span {
 .program-box-items-2 .thumb {
   text-align: center;
   transition: all 0.4s ease-in-out;
-  transition: all 900ms ease;
-  text-align: center;
 }
 .program-box-items-2 .thumb.style-left {
   margin-left: 18px;
 }
 .program-box-items-2 .thumb img {
   transform: translateY(82%);
-  transition: transform 1.5s ease;
+  transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 @media (max-width: 1199px) {
   .program-box-items-2 .thumb img {
@@ -8776,10 +8774,6 @@ span {
   position: absolute;
   top: 15px;
   left: 15px;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
   content: "";
   border: 1.13px dashed rgb(92, 112, 126);
   border-radius: 30px;
@@ -8794,7 +8788,6 @@ span {
   display: inline-block;
   background: rgba(243, 159, 95, 0.2);
   border-radius: 10px;
-  text-align: center;
   padding: 8px 12px;
   line-height: 1;
   margin-bottom: 20px;
@@ -8819,6 +8812,7 @@ span {
   background-repeat: no-repeat;
   background-size: 0% 2px;
   display: inline;
+  transition: all 0.4s ease;
 }
 .program-box-items-2 .content .title a:hover {
   color: var(--theme);
@@ -8835,7 +8829,6 @@ span {
   display: inline-block;
   background: rgba(3, 166, 166, 0.1);
   border-radius: 10px;
-  text-align: center;
   text-transform: capitalize;
   padding: 8px 12px;
   line-height: 1;
@@ -8853,10 +8846,6 @@ span {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.program-box-items-2 .content .arrow-btn .icon img path {
-  transition: all 0.4s ease-in-out;
-  fill: var(--theme);
-}
 .program-box-items-2 .content .arrow-btn .icon .bg {
   display: inline-block;
   width: 55px;
@@ -8871,14 +8860,11 @@ span {
 .program-box-items-2 .content .arrow-btn .icon:hover .bg {
   background-color: var(--theme);
 }
-.program-box-items-2 .content .arrow-btn .icon:hover svg path {
-  fill: var(--white);
-}
 .program-box-items-2:hover {
   transform: translateY(-15px);
 }
 .program-box-items-2.active .thumb img {
-  animation: cartoonUp 1.6s ease forwards;
+  transform: translateY(0);
 }
 
 @keyframes cartoonUp {
@@ -15287,4 +15273,8 @@ span {
 .box-color-4 {
   background: rgba(181, 233, 58, 0.15);
   color: #F92596;
+}
+
+.bg-trans {
+  background-color: transparent !important;
 }/*# sourceMappingURL=main.css.map */
